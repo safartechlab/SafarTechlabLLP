@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cloud Solutions & DevOps</title>
+
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/cloud_dev.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+</head>
+
+<body>
+
+
+    <div id="header"></div>
+    <main>
+
+    <section class="cloud-hero">
+  <div class="cloud-hero-overlay"></div>
+
+  <div class="cloud-hero-content">
+    <h1>Cloud Solutions & DevOps</h1>
+    <p>
+      Accelerate your business with scalable cloud infrastructure and
+      efficient DevOps practices for faster and reliable deployments.
+    </p>
+  </div>
+</section>
+
+
+<section class="cloud-services">
+
+  <!-- Cloud Solutions -->
+  <div class="cloud-section">
+    <div class="cloud-text">
+      <h2>Cloud Solutions</h2>
+      <p>
+        We provide reliable and scalable Cloud Solutions to help
+        businesses modernize their IT infrastructure and improve
+        operational efficiency. Our services include cloud migration,
+        deployment, and management across leading platforms, 
+        ensuring secure and seamless access to data and applications
+        anytime, anywhere. By leveraging cloud technology, 
+        we help organizations reduce costs, enhance flexibility,
+        and scale resources as needed. With a strong focus on 
+        performance, security, and reliability, we enable businesses
+        to innovate faster and stay competitive in a digital-first world.
+      </p>
+
+      <div class="cloud-points">
+        <ul>
+          <li>Cloud Migration</li>
+          <li>AWS / Azure / GCP</li>
+          <li>Cloud Security</li>
+        </ul>
+
+        <ul>
+          <li>Scalable Infrastructure</li>
+          <li>Cost Optimization</li>
+          <li>Monitoring & Support</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cloud-image">
+      <img src="assets/images/cloud_1.jpg" alt="Cloud Solutions">
+    </div>
+  </div>
+
+
+  <!-- DevOps (Reversed) -->
+  <div class="devops-section">
+    <div class="devops-image">
+      <img src="assets/images/devops.jpg" alt="DevOps">
+    </div>
+
+    <div class="devops-text">
+      <h2>DevOps</h2>
+      <p>
+        We deliver efficient DevOps solutions that bridge the gap 
+        between development and operations, enabling faster and 
+        more reliable software delivery. By implementing automation, 
+        continuous integration, and continuous deployment (CI/CD), 
+        we streamline workflows and reduce time-to-market. Our DevOps 
+        practices enhance collaboration, improve system stability, 
+        and ensure seamless deployment across environments. With a
+        focus on scalability, security, and performance, we help 
+        businesses build, test, and release applications with 
+        greater speed and confidence.
+      </p>
+
+      <div class="devops-points">
+        <ul>
+          <li>CI/CD Pipelines</li>
+          <li>Automation</li>
+          <li>Docker & Kubernetes</li>
+        </ul>
+
+        <ul>
+          <li>Monitoring</li>
+          <li>Infrastructure as Code</li>
+          <li>Continuous Integration</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+    
+
+
+
+  </main>
+  <div id="footer"></div>
+
+    <script>
+    
+ document.addEventListener("DOMContentLoaded", function () {
+
+  // Load header
+   fetch("components/header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header").innerHTML = data;
+
+      /* ===== DROPDOWN JS (MUST BE HERE) ===== */
+      const toggle = document.getElementById("aboutToggle");
+      const dropdown = document.getElementById("aboutDropdown");
+
+      if (toggle && dropdown) {
+        const arrow = toggle.querySelector(".dropdown-arrow");
+
+        toggle.addEventListener("click", function (e) {
+          e.stopPropagation();
+          dropdown.classList.toggle("active");
+          arrow.classList.toggle("rotate");
+        });
+
+        document.addEventListener("click", function (e) {
+          if (!toggle.contains(e.target) && !dropdown.contains(e.target)) {
+            dropdown.classList.remove("active");
+            arrow.classList.remove("rotate");
+          }
+        });
+      }
+    })
+    .catch(err => console.error("Header load failed:", err));
+    
+    
+    
+  // Load footer
+  fetch("components/footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    })
+    .catch(err => console.error("Footer load failed:", err));
+ });
+
+</script>
+
+</body>
+</html>

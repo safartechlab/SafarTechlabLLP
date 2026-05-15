@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Artificial Intelligence & Machine Learning</title>
+
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/AI_ML.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+</head>
+
+<body>
+
+
+    <div id="header"></div>
+    <main>
+
+    <section class="ai-hero">
+  <div class="ai-hero-overlay"></div>
+
+  <div class="ai-hero-content">
+    <h1>Artificial Intelligence & Machine Learning</h1>
+    <p>
+      Empower your business with intelligent systems, automation, and
+      data-driven decision-making using AI & ML solutions.
+    </p>
+  </div>
+</section>
+
+
+<section class="ai-services">
+
+  <!-- AI -->
+  <div class="ai-section">
+    <div class="ai-text">
+      <h2>Artificial Intelligence</h2>
+      <p>
+        
+        We provide cutting-edge Artificial Intelligence solutions 
+        that help businesses automate processes, gain deeper 
+        insights, and enhance decision-making. By leveraging 
+        machine learning, natural language processing, and 
+        data-driven models, we build intelligent systems 
+        tailored to your business needs. Our AI services 
+        enable predictive analytics, smart automation, and 
+        personalized user experiences, helping organizations 
+        improve efficiency and drive innovation. With a focus
+         on accuracy, scalability, and real-world impact, we 
+         empower businesses to stay ahead in an increasingly
+          intelligent digital landscape.
+      </p>
+
+      <div class="ai-points">
+        <ul>
+          <li>Chatbots & Virtual Assistants</li>
+          <li>Natural Language Processing</li>
+          <li>Computer Vision</li>
+        </ul>
+
+        <ul>
+          <li>Automation Solutions</li>
+          <li>AI Integration</li>
+          <li>Custom AI Models</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="ai-image">
+      <img src="assets/images/AI_1.jpg" alt="Artificial Intelligence">
+    </div>
+  </div>
+
+
+  <!-- ML (Reversed) -->
+  <div class="ml-section">
+    <div class="ml-image">
+      <img src="assets/images/ml_1.jpg" alt="Machine Learning">
+    </div>
+
+    <div class="ml-text">
+      <h2>Machine Learning</h2>
+      <p>
+        We offer advanced Machine Learning solutions that enable 
+        businesses to uncover patterns, predict outcomes, and
+         make intelligent decisions based on data. By building
+        and deploying customized ML models, we help automate 
+        complex processes and improve accuracy across operations.
+        Our services include data preprocessing, model development, 
+        training, and continuous optimization to ensure high 
+        performance. With a strong focus on scalability and 
+        real-world applicability, we empower organizations to
+        leverage data effectively and drive innovation through 
+        intelligent automation.
+      </p>
+
+      <div class="ml-points">
+        <ul>
+          <li>Predictive Modeling</li>
+          <li>Data Classification</li>
+          <li>Regression Analysis</li>
+        </ul>
+
+        <ul>
+          <li>Recommendation Systems</li>
+          <li>Model Training</li>
+          <li>Data Processing</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+    
+
+
+
+  </main>
+  <div id="footer"></div>
+
+    <script>
+    
+ document.addEventListener("DOMContentLoaded", function () {
+
+  // Load header
+   fetch("components/header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header").innerHTML = data;
+
+      /* ===== DROPDOWN JS (MUST BE HERE) ===== */
+      const toggle = document.getElementById("aboutToggle");
+      const dropdown = document.getElementById("aboutDropdown");
+
+      if (toggle && dropdown) {
+        const arrow = toggle.querySelector(".dropdown-arrow");
+
+        toggle.addEventListener("click", function (e) {
+          e.stopPropagation();
+          dropdown.classList.toggle("active");
+          arrow.classList.toggle("rotate");
+        });
+
+        document.addEventListener("click", function (e) {
+          if (!toggle.contains(e.target) && !dropdown.contains(e.target)) {
+            dropdown.classList.remove("active");
+            arrow.classList.remove("rotate");
+          }
+        });
+      }
+    })
+    .catch(err => console.error("Header load failed:", err));
+    
+    
+    
+  // Load footer
+  fetch("components/footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    })
+    .catch(err => console.error("Footer load failed:", err));
+ });
+
+</script>
+
+</body>
+</html>

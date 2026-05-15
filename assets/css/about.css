@@ -1,0 +1,586 @@
+/* =========================
+   ABOUT PAGE HERO SECTION
+========================= */
+
+.aboutpage-hero {
+   position: relative;
+  min-height: 90vh;  /* full screen */
+  background-image: url("../images/about_banner.jpg"); /* your image path */
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  color: #fff;
+  padding: 0 20px;
+}
+
+/* Overlay */
+.aboutpage-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 1;
+}
+
+/* Content */
+.aboutpage-hero-content {
+  position: relative;
+  max-width: 850px;
+  z-index: 2;
+  
+}
+
+.aboutpage-hero-content h1 {
+  font-size: 64px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 0.8px;
+
+  opacity: 0;
+  animation: aboutHeroTitleUp 1.1s ease forwards;
+}
+
+.aboutpage-hero-content p {
+  font-size: 20px;
+  line-height: 1.7;
+  color: #e5e7eb;
+  letter-spacing: 0.5px;
+
+  opacity: 0;
+  animation: aboutHeroParaUp 1s ease forwards;
+  animation-delay: 0.3s;         
+  
+}
+
+/* Heading animation */
+
+@keyframes aboutHeroTitleUp {
+  0% {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Paragraph slide-up */
+@keyframes aboutHeroParaUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+/* =========================
+   ABOUT US DETAILS SECTION
+========================= */
+
+.aboutus-details-section {
+  padding: 100px 20px;
+  background-color: #ffffff;
+  margin-bottom: -70px;
+}
+
+.aboutus-details-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 148px;
+  align-items: center;
+}
+
+/* LEFT CONTENT */
+.aboutus-details-content {
+  flex: 1;
+}
+
+.aboutus-text {
+  flex: 0 0 90%;   /* increases title width */
+  max-width: 90%;
+}
+
+.aboutus-details-title {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #111827;
+  width: 129%;
+}
+
+/* ITEM BLOCK */
+.aboutus-item {
+  margin-bottom: 30px;
+}
+
+.aboutus-item h3 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 10px;
+}
+
+.aboutus-item h3 i {
+  color: #007bff;
+  font-size: 20px;
+}
+
+.aboutus-item p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #007bff;
+  margin: 0;
+  letter-spacing: 0.4px;
+}
+
+/* VALUES LIST */
+.aboutus-values-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+.aboutus-values-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  color: #007bff;
+  margin-bottom: 12px;
+  letter-spacing: 0.4px;
+}
+
+.aboutus-values-list li i {
+  color: #007bff;
+  font-size: 18px;
+}
+
+/* RIGHT IMAGE */
+.aboutus-image-box {
+  flex: 1;
+}
+
+.aboutus-image-box img {
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+
+
+
+/* ===========
+============== ABOUT US COUNTER SECTION ===
+====================== */ 
+
+/* Section */ 
+.aboutus-counter-section 
+{ 
+  background: #394079; 
+  padding: 100px 0;
+  overflow: hidden; 
+} 
+
+/* Title */ 
+.aboutus-slider-title { 
+  text-align: center; 
+  color: #fff; 
+  font-size: 38px; 
+  margin-bottom: 60px; 
+} 
+
+  /* Wrapper */ 
+  .aboutus-slider-wrapper { 
+    overflow: hidden; 
+    width: 100%; 
+    max-width: 1140px;/* 360 * 3 + gaps */ 
+    margin: 0 auto; 
+  } 
+  
+  .aboutus-slider-track.no-transition { 
+    transition: none !important;
+   } 
+
+
+   /* Track */ 
+   .aboutus-slider-track { 
+    display: flex;
+     gap: 30px;
+      transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1); 
+      will-change: transform; 
+    } 
+    
+    /* Card (layout only — NEVER animate) */ 
+    
+    .aboutus-slide-card { 
+      min-width: 360px; 
+      height: 300px; 
+      display: flex; 
+      align-items: stretch; 
+    } 
+    
+    /* Inner card (ONLY this animates) */ 
+    
+    .aboutus-slide-inner { 
+      width: 100%; 
+      height: 100%; 
+      background: #fff; 
+      padding: 30px; 
+      border-radius: 20px; 
+      transform: scale(0.88); 
+      opacity: 0.45; 
+      transition: transform 0.6s ease, 
+                  box-shadow 0.6s ease, 
+                  opacity 0.6s ease;
+     } 
+     
+     /* Active (center) */ 
+     .aboutus-slide-card.active .aboutus-slide-inner {
+       transform: scale(1); 
+       opacity: 1; 
+       box-shadow: 0 35px 70px rgba(0,0,0,0.45); 
+      }
+      
+      /* Content */ 
+      
+      .aboutus-slide-inner h3 {
+         font-size: 24px; 
+         margin-bottom: 18px; 
+         color: #0b1c2d; 
+        } 
+        
+        .aboutus-slide-inner ul { 
+          padding-left: 18px; 
+        } 
+        
+   .aboutus-slide-inner ul li {
+           font-size: 
+           16px; 
+           margin-bottom: 10px; 
+          color: #374151; 
+   }
+
+
+  
+/* =========================
+   ABOUT US FEATURES SECTION
+========================= */
+
+.aboutus-features-section {
+  padding: 100px 20px;
+  background-color: #ffffff;
+}
+
+.aboutus-features-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header */
+.aboutus-features-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.aboutus-features-header h2 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #111827;
+}
+
+.aboutus-features-header p {
+  font-size: 18px;
+  max-width: 720px;
+  margin: auto;
+  color: #007bff;
+  letter-spacing: 0.5px;
+  line-height: 30px;
+}
+
+/* Grid */
+.aboutus-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+/* Feature Box */
+.aboutus-feature-box {
+ background: #111827;
+  padding: 35px 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    background-color 0.35s ease,
+    color 0.35s ease;
+  color: #ffffff;
+}
+
+.aboutus-feature-box:hover {
+  background-color: #ffffff;     /* WHITE BACKGROUND */
+  transform: translateY(-12px);
+  box-shadow: 0 25px 45px rgba(0,0,0,0.25);
+  color: #111827; 
+}
+
+/* Icon */
+.aboutus-feature-box i {
+  font-size: 42px;
+  color: #007bff;
+  margin-bottom: 20px;
+  transition: color 0.35s ease;
+}
+
+/* Change icon color on hover */
+.aboutus-feature-box:hover i {
+  color: #111827;
+}
+
+/* Title */
+.aboutus-feature-box h3 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+/* Text */
+.aboutus-feature-box p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #fff;
+  letter-spacing: 0.4px;
+  transition: color 0.35s ease;
+  margin-top: 25px;
+}
+
+/* Paragraph color on hover */
+.aboutus-feature-box:hover p {
+  color: #007bff;
+}
+
+
+
+/* =========================
+   RESPONSIVE ONLY FIXES
+========================= */
+
+/* Tablet Devices */
+@media (max-width: 992px) {
+
+  /* ABOUT DETAILS */
+  .aboutus-details-container {
+    flex-direction: column;
+    gap: 50px;
+  }
+
+  .aboutus-details-title {
+    font-size: 36px;
+    width: 100%;
+  }
+
+  .aboutus-text {
+    max-width: 100%;
+  }
+
+  /* SLIDER */
+  .aboutus-slider-title {
+    font-size: 30px;
+  }
+
+  .aboutus-slide-card {
+    min-width: 260px;
+  }
+
+  /* FEATURES GRID */
+  .aboutus-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+
+/* Mobile Devices */
+@media (max-width: 576px) {
+
+  /* HERO */
+  .aboutpage-hero {
+    min-height: 70vh;
+    padding: 0 15px;
+  }
+
+  .aboutpage-hero-content h1 {
+    font-size: 32px;
+  }
+
+  .aboutpage-hero-content p {
+    font-size: 15px;
+  }
+
+  /* ABOUT DETAILS */
+  .aboutus-details-section {
+    padding: 60px 15px;
+  }
+
+  .aboutus-details-title {
+    font-size: 28px;
+  }
+
+  .aboutus-item h3 {
+    font-size: 18px;
+  }
+
+  .aboutus-item p {
+    font-size: 14px;
+  }
+
+  .aboutus-image-box{
+    padding-bottom: 20px;
+  }
+
+  /* =========================================
+   MOBILE SLIDER (MANUAL SWIPE)
+========================================= */
+
+@media (max-width: 768px) {
+
+  .aboutus-counter-section {
+    padding: 70px 0;
+    overflow: hidden;
+  }
+
+  /* WRAPPER */
+  .aboutus-slider-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+
+    padding: 0 15px;
+
+    scrollbar-width: none;
+  }
+
+  .aboutus-slider-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* TRACK */
+  .aboutus-slider-track {
+    display: flex;
+    gap: 20px;
+
+    width: max-content;
+
+    transform: none !important;
+    transition: none !important;
+  }
+
+  /* CARD */
+  .aboutus-slide-card {
+
+  flex: 0 0 80vw;
+  max-width: 80vw;
+  scroll-snap-align: center;
+  display: flex;
+  justify-content: center;
+  }
+
+  /* INNER CARD */
+  .aboutus-slide-inner {
+    width: 100%;
+    background: #fff;
+
+    padding: 28px 22px;
+
+    border-radius: 18px;
+
+    box-sizing: border-box;
+
+    transform: scale(1);
+    opacity: 1;
+
+    transition: 0.3s ease;
+  }
+
+  /* CONTENT */
+  .aboutus-slide-inner h3 {
+    font-size: 22px;
+    line-height: 1.4;
+    margin-bottom: 18px;
+  }
+
+  .aboutus-slide-inner ul li {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 10px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .aboutus-slider-wrapper {
+    padding: 0 12px;
+  }
+
+  .aboutus-slide-card {
+    min-width: calc(100vw - 24px);
+    max-width: calc(100vw - 24px);
+  }
+
+  .aboutus-slide-inner {
+    padding: 24px 18px;
+  }
+
+  .aboutus-slide-inner h3 {
+    font-size: 20px;
+  }
+
+  .aboutus-slide-inner ul li {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+
+
+
+
+
+  /* FEATURES */
+  .aboutus-features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .aboutus-features-header h2 {
+    font-size: 28px;
+  }
+
+  .aboutus-features-header p {
+    font-size: 15px;
+  }
+}

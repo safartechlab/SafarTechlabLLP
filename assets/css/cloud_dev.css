@@ -1,0 +1,421 @@
+/* ===============================
+   CLOUD HERO
+================================= */
+
+.cloud-hero{
+  position: relative;
+  height: 90vh;
+  background-image: url("../images/cloud_banner.jpg");
+  background-size: cover;
+  background-position: center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:0 20px;
+  color:#fff;
+  overflow: hidden;
+}
+
+/* Overlay */
+.cloud-hero-overlay{
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,0.7);
+  z-index: 1;
+}
+
+/* Content */
+.cloud-hero-content{
+  position:relative;
+  z-index:2;
+  max-width:900px;
+}
+
+.cloud-hero-content h1{
+  font-size:60px;
+  margin-bottom:20px;
+  opacity:0;
+  animation: fadeUp 1s ease forwards;
+}
+
+.cloud-hero-content p{
+  font-size:20px;
+  color:#e5e7eb;
+  opacity:0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay:0.4s;
+}
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform: translateY(50px);
+  }
+  to{
+    opacity:1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================
+   RESPONSIVE - CLOUD HERO SECTION
+========================================= */
+
+/* =========================
+   LARGE TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+  .cloud-hero {
+    height: 80vh;
+    padding: 0 30px;
+  }
+
+  .cloud-hero-content {
+    max-width: 750px;
+  }
+
+  .cloud-hero-content h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 18px;
+  }
+
+  .cloud-hero-content p {
+    font-size: 18px;
+    line-height: 1.7;
+  }
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+  .cloud-hero {
+    height: 75vh;
+    padding: 0 25px;
+    background-position: center;
+  }
+
+  .cloud-hero-content {
+    max-width: 100%;
+  }
+
+  .cloud-hero-content h1 {
+    font-size: 38px;
+    line-height: 1.3;
+    margin-bottom: 16px;
+  }
+
+  .cloud-hero-content p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 576px) {
+
+  .cloud-hero {
+    height: 70vh;
+    padding: 0 20px;
+  }
+
+  .cloud-hero-content h1 {
+    font-size: 30px;
+    line-height: 1.3;
+    margin-bottom: 14px;
+  }
+
+  .cloud-hero-content p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+  .cloud-hero {
+    height: 65vh;
+    padding: 0 16px;
+  }
+
+  .cloud-hero-content h1 {
+    font-size: 26px;
+  }
+
+  .cloud-hero-content p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+
+
+/* ===============================
+   CLOUD SERVICES
+================================= */
+
+.cloud-services{
+    width:85%;
+    max-width:1200px;
+    margin:auto;
+    padding:60px 0;
+}
+
+/* Sections */
+.cloud-section,
+.devops-section{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:50px;
+    margin-bottom:80px;
+}
+
+.cloud-section h2,
+.devops-section h2{
+    font-size:32px;
+    margin-bottom:15px;
+    color: #111827;
+}
+
+.cloud-section p,
+.devops-section p{
+    margin-bottom:20px;
+    color: #007bff;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* Text */
+.cloud-text,
+.devops-text{
+    width:50%;
+    max-width:500px;
+}
+
+/* Image */
+.cloud-image,
+.devops-image{
+   width:50%;
+    display:flex;
+    justify-content:center;
+}
+
+.cloud-image img,
+.devops-image img{
+    width:1200px;
+    max-width:493px;   /* keeps it clean like previous layout */  
+    border-radius:16px;
+    height: 400px;
+}
+
+/* Bullet layout */
+.cloud-points,
+.devops-points{
+    display:flex;
+    gap:40px;
+    color: #007bff;
+}
+
+.cloud-points ul,
+.devops-points ul{
+    list-style:none;
+    padding-left:0;
+}
+
+.cloud-points li,
+.devops-points li{
+    position:relative;
+    padding-left:28px;
+    margin-bottom:12px;
+}
+
+/* Tick */
+.cloud-points li::before,
+.devops-points li::before{
+    content:"✔";
+    position:absolute;
+    left:0;
+    color:#000;
+}
+
+/* =========================================
+   RESPONSIVE - CLOUD SERVICES SECTION
+========================================= */
+
+/* =========================
+   LARGE TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+  .cloud-services {
+    width: 90%;
+    padding: 50px 0;
+  }
+
+  .cloud-section,
+  .devops-section {
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 70px;
+    text-align: center;
+  }
+
+  /* TEXT */
+  .cloud-text,
+  .devops-text {
+    width: 100%;
+    max-width: 100%;
+    order: 1;
+  }
+
+  /* IMAGE BELOW CONTENT */
+  .cloud-image,
+  .devops-image {
+    width: 100%;
+    order: 2;
+  }
+
+  .cloud-section h2,
+  .devops-section h2 {
+    font-size: 30px;
+    line-height: 1.3;
+  }
+
+  .cloud-section p,
+  .devops-section p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .cloud-image img,
+  .devops-image img {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    border-radius: 16px;
+  }
+
+  /* POINTS */
+  .cloud-points,
+  .devops-points {
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    text-align: left;
+  }
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+
+  .cloud-services {
+    width: 92%;
+    padding: 45px 0;
+  }
+
+  .cloud-section,
+  .devops-section {
+    gap: 35px;
+    margin-bottom: 60px;
+  }
+
+  .cloud-section h2,
+  .devops-section h2 {
+    font-size: 26px;
+  }
+
+  .cloud-section p,
+  .devops-section p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .cloud-image img,
+  .devops-image img {
+    width: 100%;
+    max-width: 100%;
+    height: 320px;
+    object-fit: cover;
+  }
+
+  .cloud-points,
+  .devops-points {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .cloud-points li,
+  .devops-points li {
+    font-size: 15px;
+    line-height: 1.6;
+    padding-left: 24px;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 576px) {
+
+  .cloud-services {
+    width: 94%;
+    padding: 40px 0;
+  }
+
+  .cloud-section,
+  .devops-section {
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  .cloud-section h2,
+  .devops-section h2 {
+    font-size: 22px;
+    line-height: 1.3;
+  }
+
+  .cloud-section p,
+  .devops-section p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .cloud-image img,
+  .devops-image img {
+    height: 250px;
+    border-radius: 14px;
+  }
+
+  .cloud-points li,
+  .devops-points li {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+}

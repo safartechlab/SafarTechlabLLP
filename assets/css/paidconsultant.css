@@ -1,0 +1,339 @@
+/* =========================
+   CONSULTANT GUIDELINES
+========================= */
+
+.consultant-guidelines{
+    width: 100%;
+    padding: 120px 0 80px;
+    background: #f5f7fb;
+}
+
+.consultant-guidelines .container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* =========================
+   PAGE TITLE
+========================= */
+
+.consultant-guidelines h1{
+    font-size: 40px;
+    font-weight: 700;
+    color: #111827;
+    text-align: center;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.consultant-guidelines h3{
+    font-size: 22px;
+    font-weight: 600;
+    color: #2563eb;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   TOP DESCRIPTION
+========================= */
+
+.consultant-guidelines > .container > p{
+    font-size: 17px;
+    line-height: 1.9;
+    color: #4b5563;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   BOX DESIGN
+========================= */
+
+.consultant-box{
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 35px;
+    margin-top: 35px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.consultant-box:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.consultant-box h2{
+    font-size: 22px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* Large Tablet */
+@media (max-width: 992px){
+
+    .consultant-guidelines{
+        padding: 100px 0 70px;
+    }
+
+    .consultant-guidelines .container{
+        width: 92%;
+    }
+
+    .consultant-guidelines h1{
+        font-size: 34px;
+        margin-top: 70px;
+    }
+
+    .consultant-guidelines h3{
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+
+    .consultant-guidelines > .container > p{
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .consultant-box{
+        padding: 30px;
+    }
+
+    .consultant-box h2{
+        font-size: 21px;
+    }
+}
+
+
+/* Tablet */
+@media (max-width: 768px){
+
+    .consultant-guidelines{
+        padding: 90px 0 60px;
+    }
+
+    .consultant-guidelines .container{
+        width: 94%;
+    }
+
+    .consultant-guidelines h1{
+        font-size: 30px;
+        margin-top: 70px;
+    }
+
+    .consultant-guidelines h3{
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 22px;
+    }
+
+    .consultant-guidelines > .container > p{
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .consultant-box{
+        padding: 25px;
+        border-radius: 16px;
+        margin-top: 28px;
+    }
+
+    .consultant-box h2{
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 576px){
+
+    .consultant-guidelines{
+        padding: 80px 0 50px;
+    }
+
+    .consultant-guidelines .container{
+        width: 92%;
+    }
+
+    .consultant-guidelines h1{
+        font-size: 26px;
+        line-height: 1.3;
+        margin-top: 70px;
+    }
+
+    .consultant-guidelines h3{
+        font-size: 17px;
+        margin-bottom: 20px;
+    }
+
+    .consultant-guidelines > .container > p{
+        font-size: 14px;
+        line-height: 1.7;
+        text-align: center;
+    }
+
+    .consultant-box{
+        padding: 20px;
+        border-radius: 14px;
+        margin-top: 24px;
+    }
+
+    .consultant-box h2{
+        font-size: 18px;
+        line-height: 1.5;
+    }
+}
+
+
+
+/* =========================
+   TEXT
+========================= */
+
+.consultant-box p{
+    font-size: 16px;
+    line-height: 1.9;
+    color: #4b5563;
+    margin-bottom: 18px;
+}
+
+.consultant-box .intro-text{
+    font-weight: 500;
+    color: #1f2937;
+}
+
+
+/* =========================
+   LISTS
+========================= */
+
+.consultant-box ul{
+    padding-left: 22px;
+    margin-bottom: 18px;
+}
+
+.consultant-box ul li{
+    font-size: 16px;
+    line-height: 1.9;
+    color: #4b5563;
+    margin-bottom: 12px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 992px){
+
+    .consultant-guidelines{
+        padding: 100px 0 70px;
+    }
+
+    .consultant-guidelines h1{
+        font-size: 40px;
+    }
+
+    .consultant-box{
+        padding: 30px;
+    }
+
+    .consultant-box h2{
+        font-size: 24px;
+    }
+}
+
+
+@media (max-width: 768px){
+
+    .consultant-guidelines{
+        padding: 90px 0 60px;
+    }
+
+    .consultant-guidelines .container{
+        width: 92%;
+    }
+
+    .consultant-guidelines h1{
+        font-size: 34px;
+    }
+
+    .consultant-guidelines h3{
+        font-size: 18px;
+    }
+
+    .consultant-guidelines > .container > p{
+        font-size: 15px;
+    }
+
+    .consultant-box{
+        padding: 25px;
+        border-radius: 16px;
+    }
+
+    .consultant-box h2{
+        font-size: 22px;
+    }
+
+    .consultant-box p,
+    .consultant-box ul li{
+        font-size: 15px;
+        line-height: 1.8;
+    }
+}
+
+
+@media (max-width: 576px){
+
+    .consultant-guidelines{
+        padding: 80px 0 50px;
+    }
+
+    .consultant-guidelines h1{
+        font-size: 28px;
+    }
+
+    .consultant-guidelines h3{
+        font-size: 16px;
+    }
+
+    .consultant-box{
+        padding: 22px 18px;
+        margin-top: 25px;
+        border-radius: 14px;
+    }
+
+    .consultant-box h2{
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .consultant-box p,
+    .consultant-box ul li{
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .consultant-box ul{
+        padding-left: 18px;
+    }
+}

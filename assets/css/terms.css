@@ -1,0 +1,281 @@
+/* =========================
+   TERMS & CONDITIONS
+========================= */
+
+.terms-section{
+    width: 100%;
+    padding: 120px 0 80px;
+    background: #f5f7fb;
+}
+
+.terms-container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.terms-header{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.terms-header h1{
+    font-size: 42px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 25px;
+    line-height: 1.2;
+}
+
+.terms-header p{
+    font-size: 17px;
+    line-height: 1.9;
+    color: #4b5563;
+    margin-bottom: 15px;
+}
+
+
+/* ===============================
+   RESPONSIVE TERMS & CONDITIONS
+================================= */
+
+/* Laptop */
+@media (max-width: 1200px) {
+
+  .terms-section {
+    padding: 100px 0 70px;
+  }
+
+  .terms-container {
+    width: 92%;
+  }
+
+  .terms-header h1 {
+    font-size: 38px;
+    margin-top: 50px;
+  }
+
+  .terms-header p {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+}
+
+
+/* Tablet */
+@media (max-width: 992px) {
+
+  .terms-section {
+    padding: 90px 0 60px;
+  }
+
+  .terms-container {
+    width: 94%;
+  }
+
+  .terms-header {
+    margin-bottom: 35px;
+  }
+
+  .terms-header h1 {
+    font-size: 32px;
+    margin-top: 50px;
+  }
+
+  .terms-header p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+}
+
+
+/* Mobile */
+@media (max-width: 576px) {
+
+  .terms-section {
+    padding: 80px 0 50px;
+  }
+
+  .terms-container {
+    width: 95%;
+  }
+
+  .terms-header {
+    margin-bottom: 28px;
+  }
+
+  .terms-header h1 {
+    font-size: 26px;
+    line-height: 1.3;
+    margin-top: 50px;
+  }
+
+  .terms-header p {
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+  }
+}
+
+
+/* =========================
+   TERMS CARD
+========================= */
+
+.terms-card{
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 35px;
+    margin-bottom: 35px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+}
+
+.terms-card:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+
+/* =========================
+   TITLES
+========================= */
+
+.terms-card h2{
+    font-size: 26px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+.terms-card p{
+    font-size: 16px;
+    line-height: 1.9;
+    color: #4b5563;
+    margin-bottom: 18px;
+}
+
+.terms-intro{
+    font-weight: 600;
+    color: #1f2937;
+}
+
+
+/* =========================
+   LISTS
+========================= */
+
+.terms-card ul{
+    padding-left: 22px;
+    margin-bottom: 20px;
+}
+
+.terms-card ul li{
+    font-size: 16px;
+    line-height: 1.9;
+    color: #4b5563;
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px){
+
+    .terms-section{
+        padding: 100px 0 70px;
+    }
+
+    .terms-header h1{
+        font-size: 38px;
+    }
+
+    .terms-card{
+        padding: 30px;
+    }
+
+    .terms-card h2{
+        font-size: 24px;
+    }
+}
+
+
+@media (max-width: 768px){
+
+    .terms-section{
+        padding: 90px 0 60px;
+    }
+
+    .terms-container{
+        width: 92%;
+    }
+
+    .terms-header h1{
+        font-size: 32px;
+    }
+
+    .terms-header p{
+        font-size: 15px;
+    }
+
+    .terms-card{
+        padding: 25px;
+        border-radius: 16px;
+    }
+
+    .terms-card h2{
+        font-size: 22px;
+    }
+
+    .terms-card p,
+    .terms-card ul li{
+        font-size: 15px;
+        line-height: 1.8;
+    }
+}
+
+
+@media (max-width: 576px){
+
+    .terms-section{
+        padding: 80px 0 50px;
+    }
+
+    .terms-header h1{
+        font-size: 28px;
+    }
+
+    .terms-card{
+        padding: 22px 18px;
+        margin-bottom: 25px;
+    }
+
+    .terms-card h2{
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .terms-card p,
+    .terms-card ul li{
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .terms-card ul{
+        padding-left: 18px;
+    }
+}

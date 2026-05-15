@@ -1,0 +1,510 @@
+/* ===============================
+   WEBSITE DEVELOPMENT HERO
+================================= */
+
+.webdev-hero {
+  position: relative;
+  height: 90vh;
+  background-image: url("../images/web_devp_banner.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* Dark overlay */
+.webdev-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+/* Content */
+.webdev-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+
+.webdev-hero-content h1 {
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+
+  opacity: 0;
+  animation: headingSlideUp 1s ease forwards;
+}
+
+.webdev-hero-content p {
+  font-size: 20px;
+  line-height: 1.7;
+  color: #e5e7eb;
+
+  opacity: 0;
+  animation: paraSlideUp 1s ease forwards;
+  animation-delay: 0.2s; 
+}
+
+@keyframes headingSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes paraSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+/* =========================================
+   TABLET (1024px and below)
+========================================= */
+
+@media (max-width: 1024px) {
+
+  .webdev-hero {
+    height: 80vh;
+    padding: 0 25px;
+  }
+
+  .webdev-hero-content {
+    max-width: 750px;
+  }
+
+  .webdev-hero-content h1 {
+    font-size: 48px;
+    line-height: 1.3;
+    margin-bottom: 18px;
+  }
+
+  .webdev-hero-content p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+}
+
+
+/* =========================================
+   MOBILE (768px and below)
+========================================= */
+
+@media (max-width: 768px) {
+
+  .webdev-hero {
+    height: 70vh;
+    padding: 0 18px;
+  }
+
+  .webdev-hero-content {
+    max-width: 100%;
+  }
+
+  .webdev-hero-content h1 {
+    font-size: 36px;
+    line-height: 1.3;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+  }
+
+  .webdev-hero-content p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE (480px and below)
+========================================= */
+
+@media (max-width: 480px) {
+
+  .webdev-hero {
+    height: 65vh;
+    padding: 0 14px;
+  }
+
+  .webdev-hero-content h1 {
+    font-size: 28px;
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+
+  .webdev-hero-content p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+
+
+/* ===============================
+   DEVELOPMENT SERVICES SECTION
+================================= */
+
+.dev-services-section {
+  padding: 100px 20px;
+  background: #f9fafb;
+}
+
+.dev-alt-section {
+  display: flex;
+  align-items: center;
+  gap: 80px;                /* different spacing */
+  flex-direction: row-reverse; /* alternate */
+  background: #ffffff;      /* different background */
+  gap: 150px;
+  border-radius: 20px;
+}
+
+.dev-alt-section .dev-box {
+   max-width: 100%;
+  width: 520px;
+
+  margin-left: -40px;
+}
+
+.dev-alt-section .dev-box img {
+  width: 100%;        /* decrease width */
+  height: 450px;     /* increase height */
+  object-fit: cover;
+  border-radius: 16px;
+  /* transition: transform 0.4s ease; */
+}
+
+.dev-alt-section .dev-text h3 {
+  color: #111827;
+  font-size: 32px;
+}
+
+.dev-alt-section .dev-text p {
+  color: #007bff;
+  margin-right: 40px;
+}
+
+.dev-alt-section .dev-points{
+    margin-top: 50px;
+}
+
+.dev-services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dev-main-heading {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 100px;
+  color: #111827;
+}
+
+.dev-box img {
+  width: 95%;        /* decrease width */
+  height: 450px;     /* increase height */
+  object-fit: cover;
+  border-radius: 16px;
+  /* transition: transform 0.4s ease; */
+}
+
+/* .dev-box img:hover {
+  transform: scale(1.05);
+} */
+
+
+/* Row layout */
+.dev-service-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 115px;
+  margin-bottom: 150px;
+}
+
+/* Alternate layout */
+.dev-service-row.reverse {
+  flex-direction: row-reverse;
+}
+
+
+/* Text side */
+.dev-text {
+  flex: 1;
+}
+
+.dev-text h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #111827;
+}
+
+.dev-text p {
+  font-size: 17px;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  color: #007bff;
+  max-width: 100%;
+  width: 551px;
+}
+
+.dev-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.dev-points li {
+  position: relative;
+  padding-left: 25px;
+  font-size: 15px;
+  color: #007bff;
+}
+
+/* Custom Bullet */
+.dev-points li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #000;
+  font-weight: bold;
+}
+
+.dev-text ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #007bff;
+}
+
+/* Right box */
+.dev-box {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.dev-placeholder {
+  height: 300px;
+  background: linear-gradient(135deg, #111827, #4f46e5);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.dev-points {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-rows: repeat(3, auto);   /* 3 rows */
+  grid-auto-flow: column;                /* Fill column-wise */
+  gap: 12px 40px;
+  list-style: none;
+  padding: 0;
+  margin-top: 50px;
+}
+
+
+
+/* =========================================
+   LARGE TABLET (1024px and below)
+========================================= */
+
+@media (max-width: 1024px) {
+
+  .dev-services-section {
+    padding: 80px 20px;
+  }
+
+  .dev-main-heading {
+    font-size: 36px;
+    margin-bottom: 70px;
+  }
+
+  .dev-service-row,
+  .dev-alt-section {
+    gap: 60px;
+    margin-bottom: 100px;
+  }
+
+  .dev-text h3,
+  .dev-alt-section .dev-text h3 {
+    font-size: 28px;
+  }
+
+  .dev-text p,
+  .dev-alt-section .dev-text p {
+    width: 100%;
+    margin-right: 0;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .dev-box img,
+  .dev-alt-section .dev-box img {
+    height: 380px;
+  }
+
+  .dev-alt-section .dev-box {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .dev-points {
+    gap: 10px 25px;
+  }
+}
+
+
+/* =========================================
+   TABLET & MOBILE (768px and below)
+========================================= */
+
+@media (max-width: 768px) {
+
+  .dev-services-section {
+    padding: 70px 15px;
+  }
+
+  .dev-main-heading {
+    font-size: 30px;
+    margin-bottom: 50px;
+    line-height: 1.3;
+  }
+
+  /* STACK LAYOUT */
+  .dev-service-row,
+  .dev-service-row.reverse,
+  .dev-alt-section {
+    flex-direction: column;
+    gap: 35px;
+    margin-bottom: 80px;
+  }
+
+  .dev-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .dev-text h3,
+  .dev-alt-section .dev-text h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .dev-text p,
+  .dev-alt-section .dev-text p {
+    width: 100%;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+  }
+
+  .dev-box,
+  .dev-alt-section .dev-box {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .dev-box img,
+  .dev-alt-section .dev-box img {
+    width: 100%;
+    height: 320px;
+    border-radius: 14px;
+  }
+
+  /* POINTS */
+  .dev-points {
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+    gap: 12px;
+    margin-top: 30px;
+  }
+
+  .dev-points li {
+    font-size: 15px;
+    padding-left: 22px;
+    text-align: left;
+  }
+
+  .dev-text ul li {
+    font-size: 15px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE (480px and below)
+========================================= */
+
+@media (max-width: 480px) {
+
+  .dev-services-section {
+    padding: 60px 12px;
+  }
+
+  .dev-main-heading {
+    font-size: 26px;
+    margin-bottom: 40px;
+  }
+
+  .dev-service-row,
+  .dev-service-row.reverse,
+  .dev-alt-section {
+    gap: 28px;
+    margin-bottom: 65px;
+  }
+
+  .dev-text h3,
+  .dev-alt-section .dev-text h3 {
+    font-size: 22px;
+  }
+
+  .dev-text p,
+  .dev-alt-section .dev-text p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .dev-box img,
+  .dev-alt-section .dev-box img {
+    height: 250px;
+    border-radius: 12px;
+  }
+
+  .dev-points {
+    margin-top: 22px;
+    gap: 10px;
+  }
+
+  .dev-points li {
+    font-size: 14px;
+  }
+
+  .dev-text ul li {
+    font-size: 14px;
+  }
+}
+
+
+

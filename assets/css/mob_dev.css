@@ -1,0 +1,535 @@
+/* ===============================
+   MOBILE DEVELOPMENT HERO
+================================= */
+
+.mobile-hero {
+  position: relative;
+  height: 90vh;
+  background-image: url("../images/mob_dev_banner.jpg"); /* update path */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* Dark overlay */
+.mobile-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+}
+
+/* Content */
+.mobile-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+
+.mobile-hero-content h1 {
+  font-size: 60px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+
+  opacity: 0;
+  animation: mobileHeadingSlide 1s ease forwards;
+}
+
+.mobile-hero-content p {
+  font-size: 20px;
+  line-height: 1.7;
+  color: #e5e7eb;
+
+  opacity: 0;
+  animation: mobileParaSlide 1s ease forwards;
+  animation-delay: 0.4s;
+}
+
+/* Animations */
+@keyframes mobileHeadingSlide {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes mobileParaSlide {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+/* =========================================
+   TABLET (1024px and below)
+========================================= */
+
+@media (max-width: 1024px) {
+
+  .mobile-hero {
+    height: 80vh;
+    padding: 0 25px;
+  }
+
+  .mobile-hero-content {
+    max-width: 750px;
+  }
+
+  .mobile-hero-content h1 {
+    font-size: 48px;
+    line-height: 1.3;
+    margin-bottom: 18px;
+  }
+
+  .mobile-hero-content p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+}
+
+
+/* =========================================
+   MOBILE (768px and below)
+========================================= */
+
+@media (max-width: 768px) {
+
+  .mobile-hero {
+    height: 70vh;
+    padding: 0 18px;
+  }
+
+  .mobile-hero-content {
+    max-width: 100%;
+  }
+
+  .mobile-hero-content h1 {
+    font-size: 36px;
+    line-height: 1.3;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+  }
+
+  .mobile-hero-content p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE (480px and below)
+========================================= */
+
+@media (max-width: 480px) {
+
+  .mobile-hero {
+    height: 65vh;
+    padding: 0 14px;
+  }
+
+  .mobile-hero-content h1 {
+    font-size: 28px;
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+
+  .mobile-hero-content p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+
+
+
+/* ===============================
+   MOBILE SERVICES SECTION
+================================= */
+
+.services{
+    width:85%;
+    max-width:1200px;
+    margin:auto;
+    padding:60px 0;
+}
+
+/* Common section style */
+.android-section,
+.ios-section,
+.flutter-section{
+     display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:50px;
+    margin-bottom:80px;
+}
+
+
+/* Text container */
+.android-text,
+.ios-text,
+.flutter-text{
+    width:50%;
+    max-width:500px;      /* control width */
+}
+
+.android-text h2,
+.ios-text h2,
+.flutter-text h2{
+    font-size:32px;
+    margin-bottom:15px;
+    color: #111827;
+}
+
+.android-text p,
+.ios-text p,
+.flutter-text p{
+    margin-bottom:20px;
+    color: #007bff;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+/* Bullet points layout */
+.android-points,
+.ios-points,
+.flutter-points{
+    display:flex;
+    gap:40px;
+    color: #007bff;
+}
+
+.android-points ul,
+.ios-points ul,
+.flutter-points ul{
+    list-style: none;
+    padding-left: 0;
+}
+
+.android-points li,
+.ios-points li,
+.flutter-points li{
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    
+}
+
+.android-text ul li,
+.ios-text ul li,
+.flutter-text ul li{
+     
+  font-size: 16px;
+    
+}
+
+.android-points li::before,
+.ios-points li::before,
+.flutter-points li::before{
+    content: "✔";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #000;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Image container */
+.android-image,
+.ios-image,
+.flutter-image{
+    width:50%;
+    display:flex;
+    justify-content:center;
+}
+
+.android-image img,
+.ios-image img,
+.flutter-image img{
+    width:1200px;
+    max-width:493px;   /* keeps it clean like previous layout */  
+    border-radius:16px;
+    height: 400px;
+}
+
+
+
+/* =========================================
+   LARGE TABLET (1024px and below)
+========================================= */
+
+@media (max-width: 1024px) {
+
+  .services {
+    width: 90%;
+    padding: 70px 0;
+  }
+
+  .android-section,
+  .ios-section,
+  .flutter-section {
+    gap: 40px;
+    margin-bottom: 70px;
+  }
+
+  .android-text,
+  .ios-text,
+  .flutter-text {
+    max-width: 100%;
+  }
+
+  .android-text h2,
+  .ios-text h2,
+  .flutter-text h2 {
+    font-size: 28px;
+  }
+
+  .android-text p,
+  .ios-text p,
+  .flutter-text p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .android-image img,
+  .ios-image img,
+  .flutter-image img {
+    max-width: 420px;
+    height: 340px;
+  }
+
+  .android-points,
+  .ios-points,
+  .flutter-points {
+    gap: 25px;
+  }
+}
+
+
+/* =========================================
+   LARGE TABLET (1024px and below)
+========================================= */
+
+@media (max-width: 1024px) {
+
+  .services {
+    width: 90%;
+    padding: 70px 0;
+  }
+
+  .android-section,
+  .ios-section,
+  .flutter-section {
+    gap: 40px;
+    margin-bottom: 70px;
+  }
+
+  .android-text,
+  .ios-text,
+  .flutter-text {
+    width: 50%;
+    max-width: 100%;
+  }
+
+  .android-text h2,
+  .ios-text h2,
+  .flutter-text h2 {
+    font-size: 28px;
+  }
+
+  .android-text p,
+  .ios-text p,
+  .flutter-text p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .android-image,
+  .ios-image,
+  .flutter-image {
+    width: 50%;
+  }
+
+  .android-image img,
+  .ios-image img,
+  .flutter-image img {
+    width: 100%;
+    max-width: 420px;
+    height: 340px;
+    object-fit: cover;
+  }
+
+  .android-points,
+  .ios-points,
+  .flutter-points {
+    gap: 25px;
+  }
+}
+
+
+/* =========================================
+   TABLET & MOBILE (768px and below)
+========================================= */
+
+@media (max-width: 768px) {
+
+  .services {
+    width: 92%;
+    padding: 60px 0;
+  }
+
+  /* STACK LAYOUT */
+  .android-section,
+  .ios-section,
+  .flutter-section {
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
+  /* CONTENT FIRST */
+  .android-text,
+  .ios-text,
+  .flutter-text {
+    order: 1;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* IMAGE BELOW CONTENT */
+  .android-image,
+  .ios-image,
+  .flutter-image {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .android-text h2,
+  .ios-text h2,
+  .flutter-text h2 {
+    font-size: 24px;
+    margin-bottom: 14px;
+    line-height: 1.3;
+  }
+
+  .android-text p,
+  .ios-text p,
+  .flutter-text p {
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+  }
+
+  .android-image img,
+  .ios-image img,
+  .flutter-image img {
+    width: 100%;
+    max-width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 14px;
+  }
+
+  /* POINTS */
+  .android-points,
+  .ios-points,
+  .flutter-points {
+    flex-direction: column;
+    gap: 0;
+    align-items: flex-start;
+    text-align: left;
+    margin-top: 20px;
+  }
+
+  .android-points ul,
+  .ios-points ul,
+  .flutter-points ul {
+    width: 100%;
+  }
+
+  .android-text ul li,
+  .ios-text ul li,
+  .flutter-text ul li {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .android-points li,
+  .ios-points li,
+  .flutter-points li {
+    margin-bottom: 10px;
+    padding-left: 24px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE (480px and below)
+========================================= */
+
+@media (max-width: 480px) {
+
+  .services {
+    width: 94%;
+    padding: 50px 0;
+  }
+
+  .android-section,
+  .ios-section,
+  .flutter-section {
+    gap: 25px;
+    margin-bottom: 50px;
+  }
+
+  .android-text h2,
+  .ios-text h2,
+  .flutter-text h2 {
+    font-size: 22px;
+  }
+
+  .android-text p,
+  .ios-text p,
+  .flutter-text p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .android-image img,
+  .ios-image img,
+  .flutter-image img {
+    height: 240px;
+    border-radius: 12px;
+  }
+
+  .android-text ul li,
+  .ios-text ul li,
+  .flutter-text ul li {
+    font-size: 14px;
+  }
+
+  .android-points li,
+  .ios-points li,
+  .flutter-points li {
+    padding-left: 22px;
+  }
+}

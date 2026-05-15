@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Website Development</title>
+
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/web_dev.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+
+
+</head>
+<body>
+
+    <div id="header"></div>
+    <main>
+
+    <section class="webdev-hero">
+  <div class="webdev-hero-overlay"></div>
+
+  <div class="webdev-hero-content">
+    <h1>Website Development</h1>
+    <p>
+      We build high-performance, scalable, and modern websites
+      designed to elevate your brand and drive measurable results.
+    </p>
+  </div>
+</section>
+
+
+
+
+<section class="dev-services-section">
+  <div class="dev-services-container">
+
+    <!-- Section Heading -->
+    <!-- <h2 class="dev-main-heading">
+      Which Development Services Do We Offer?
+    </h2> -->
+
+    <!-- ===== Custom Web Development ===== -->
+    <div class="dev-service-row">
+
+      <!-- Left Content -->
+      <div class="dev-text">
+        <h3>Custom Web Development</h3>
+        <p>
+          Our custom Web development services are designed to help businesses 
+          create unique software solutions that meet their specific needs and 
+          objectives. We leverage the latest technologies and industry best 
+          practices to deliver tailored solutions that optimize business 
+          processes and improve productivity. We follow a collaborative approach, 
+          working closely with you throughout the development process to
+          ensure that the final product meets your expectations.
+        </p>
+
+        <ul class="dev-points">
+          <li>Responsive Website Design</li>
+          <li>Custom CMS Development</li>
+          <li>API Integration</li>
+          <li>Performance Optimization</li>
+          <li>Mobile Application Development</li>
+          <li>Maintenance & Support</li>
+        </ul>
+      </div>
+
+      <!-- Right Container -->
+      <div class="dev-box">
+        <img src="assets/images/web_devp.jpg" alt="Custom Web Development">
+      </div>
+
+    </div>
+
+
+  <div class="dev-service-row dev-alt-section">
+
+  <!-- Content -->
+  <div class="dev-text">
+    <h3>Ecommerce Development</h3>
+    <p>
+      Planning to launch an eCommerce store? Our expert team understands the pain 
+      points and struggles that come along with the growing eCommerce platform.
+      Our team can help you develop an eCommerce website and apps that runs 
+      smoothly on any device to provide a seamless experience for your 
+      customers and drive sales for your online store. Our services don’t 
+      end with delivering a platform, our team provides ongoing support to
+      help you stay competitive in the market.
+    </p>
+
+    <ul class="dev-points">
+      <li>Shopping Cart Development</li>
+      <li>Payment Gateway Integration</li>
+      <li>Custom Product Management</li>
+      <li>Secure Checkout Systems</li>
+      <li>Inventory Management</li>
+      <li>Marketplace Integration</li>
+    </ul>
+  </div>
+
+
+  <!-- Image -->
+  <div class="dev-box">
+    <img src="assets/images/ecommerce.jpg" alt="Ecommerce Development">
+  </div>
+
+</div>
+</section>
+
+
+
+    </main>
+    <div id="footer"></div>
+
+    <script>
+    
+ document.addEventListener("DOMContentLoaded", function () {
+
+  // Load header
+   fetch("components/header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header").innerHTML = data;
+
+      /* ===== DROPDOWN JS (MUST BE HERE) ===== */
+      const toggle = document.getElementById("aboutToggle");
+      const dropdown = document.getElementById("aboutDropdown");
+
+      if (toggle && dropdown) {
+        const arrow = toggle.querySelector(".dropdown-arrow");
+
+        toggle.addEventListener("click", function (e) {
+          e.stopPropagation();
+          dropdown.classList.toggle("active");
+          arrow.classList.toggle("rotate");
+        });
+
+        document.addEventListener("click", function (e) {
+          if (!toggle.contains(e.target) && !dropdown.contains(e.target)) {
+            dropdown.classList.remove("active");
+            arrow.classList.remove("rotate");
+          }
+        });
+      }
+    })
+    .catch(err => console.error("Header load failed:", err));
+
+
+    
+  // Load footer
+  fetch("components/footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    })
+    .catch(err => console.error("Footer load failed:", err));
+ });
+ </script>
+
+
+</body>
+</html>

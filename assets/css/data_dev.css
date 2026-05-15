@@ -1,0 +1,399 @@
+/* ===============================
+   DATA HERO SECTION
+================================= */
+
+.data-hero{
+  position: relative;
+  height: 90vh;
+  background-image: url("../images/data_dev.jpg"); /* update path */
+  background-size: cover;
+  background-position: center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:0 20px;
+  color:#fff;
+  overflow:hidden;
+}
+
+/* Overlay */
+.data-hero-overlay{
+  position:absolute;
+  inset:0;
+  background: rgba(0,0,0,0.65);
+}
+
+/* Content */
+.data-hero-content{
+  position:relative;
+  z-index:2;
+  max-width:900px;
+}
+
+/* Heading */
+.data-hero-content h1{
+  font-size:60px;
+  font-weight:700;
+  margin-bottom:20px;
+  letter-spacing:1px;
+
+  opacity:0;
+  animation: fadeUp 1s ease forwards;
+}
+
+/* Paragraph */
+.data-hero-content p{
+  font-size:20px;
+  line-height:1.7;
+  color:#e5e7eb;
+
+  opacity:0;
+  animation: fadeUp 1s ease forwards;
+  animation-delay:0.4s;
+}
+
+/* Animation */
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(50px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+
+/* =========================================
+   TABLET (1024px and below)
+========================================= */
+
+@media (max-width: 1024px) {
+
+  .data-hero {
+    height: 80vh;
+    padding: 0 25px;
+  }
+
+  .data-hero-content {
+    max-width: 750px;
+  }
+
+  .data-hero-content h1 {
+    font-size: 48px;
+    line-height: 1.3;
+    margin-bottom: 18px;
+  }
+
+  .data-hero-content p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+}
+
+
+/* =========================================
+   MOBILE (768px and below)
+========================================= */
+
+@media (max-width: 768px) {
+
+  .data-hero {
+    height: 70vh;
+    padding: 0 18px;
+  }
+
+  .data-hero-content {
+    max-width: 100%;
+  }
+
+  .data-hero-content h1 {
+    font-size: 36px;
+    line-height: 1.3;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+  }
+
+  .data-hero-content p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE (480px and below)
+========================================= */
+
+@media (max-width: 480px) {
+
+  .data-hero {
+    height: 65vh;
+    padding: 0 14px;
+  }
+
+  .data-hero-content h1 {
+    font-size: 28px;
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+
+  .data-hero-content p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+}
+
+
+
+
+/* Wrapper */
+.data-services{
+    width:85%;
+    max-width:1200px;
+    margin:auto;
+    padding:60px 0;
+}
+
+/* Sections */
+.data-section,
+.bi-section{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:50px;
+    margin-bottom:80px;
+}
+
+.data-section h2,
+.bi-section h2{
+    font-size:32px;
+    margin-bottom:15px;
+    color: #111827;
+}
+
+.data-section p,
+.bi-section p{
+    margin-bottom:20px;
+    color: #007bff;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* Text */
+.data-text,
+.bi-text{
+    width:50%;
+    max-width:500px;
+}
+
+/* Image */
+.data-image,
+.bi-image{
+    width:50%;
+    display:flex;
+    justify-content:center;
+}
+
+.data-image img,
+.bi-image img{
+   width:1200px;
+    max-width:493px;   /* keeps it clean like previous layout */  
+    border-radius:16px;
+    height: 400px;
+}
+
+/* Bullet layout */
+.data-points,
+.bi-points{
+    display:flex;
+    gap:40px;
+    color: #007bff;
+}
+
+.data-points ul,
+.bi-points ul{
+    list-style:none;
+    padding-left:0;
+}
+
+.data-points li,
+.bi-points li{
+    position:relative;
+    padding-left:28px;
+    margin-bottom:12px;
+}
+
+/* Tick icon */
+.data-points li::before,
+.bi-points li::before{
+    content:"✔";
+    position:absolute;
+    left:0;
+    color:#000;
+}
+
+
+/* =========================================
+   RESPONSIVE - DATA SERVICES SECTION
+========================================= */
+
+/* =========================
+   LARGE TABLET
+========================= */
+
+@media (max-width: 992px) {
+
+  .data-services {
+    width: 90%;
+    padding: 50px 0;
+  }
+
+  .data-section,
+  .bi-section {
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 70px;
+    text-align: center;
+  }
+
+  /* IMAGE BELOW CONTENT */
+  .data-text,
+  .bi-text {
+    width: 100%;
+    max-width: 100%;
+    order: 1;
+  }
+
+  .data-image,
+  .bi-image {
+    width: 100%;
+    order: 2;
+  }
+
+  .data-section h2,
+  .bi-section h2 {
+    font-size: 30px;
+  }
+
+  .data-section p,
+  .bi-section p {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  .data-image img,
+  .bi-image img {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    border-radius: 16px;
+  }
+
+  /* POINTS */
+  .data-points,
+  .bi-points {
+    justify-content: center;
+    gap: 30px;
+    text-align: left;
+    flex-wrap: wrap;
+  }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+  .data-services {
+    width: 92%;
+    padding: 45px 0;
+  }
+
+  .data-section,
+  .bi-section {
+    gap: 35px;
+    margin-bottom: 60px;
+  }
+
+  .data-section h2,
+  .bi-section h2 {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+
+  .data-section p,
+  .bi-section p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .data-image img,
+  .bi-image img {
+    width: 100%;
+    max-width: 100%;
+    height: 320px;
+    object-fit: cover;
+  }
+
+  .data-points,
+  .bi-points {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .data-points li,
+  .bi-points li {
+    font-size: 15px;
+    line-height: 1.6;
+    padding-left: 24px;
+  }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+  .data-services {
+    width: 94%;
+    padding: 40px 0;
+  }
+
+  .data-section,
+  .bi-section {
+    gap: 30px;
+    margin-bottom: 50px;
+  }
+
+  .data-section h2,
+  .bi-section h2 {
+    font-size: 22px;
+  }
+
+  .data-section p,
+  .bi-section p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .data-image img,
+  .bi-image img {
+    height: 250px;
+    border-radius: 14px;
+  }
+
+  .data-points li,
+  .bi-points li {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+}

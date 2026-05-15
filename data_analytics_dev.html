@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Data Analytics & Business Intelligence</title>
+
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/data_dev.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+</head>
+
+<body>
+
+
+    <div id="header"></div>
+    <main>
+
+        <section class="data-hero">
+  <div class="data-hero-overlay"></div>
+
+  <div class="data-hero-content">
+    <h1>Data Analytics & Business Intelligence</h1>
+    <p>
+      Unlock the power of your data with advanced analytics and BI solutions
+      that drive smarter decisions and business growth.
+    </p>
+  </div>
+</section>
+
+
+<section class="data-services">
+
+  <!-- Data Analytics -->
+  <div class="data-section">
+    <div class="data-text">
+      <h2>Data Analytics</h2>
+      <p>
+        We provide advanced Data Analytics solutions to help businesses make smarter, 
+        data-driven decisions. Our team transforms raw data into meaningful 
+        insights by using modern tools and analytical techniques. 
+        From data collection and processing to visualization and reporting, 
+        we ensure accuracy and clarity at every step. By identifying trends, 
+        patterns, and opportunities, we help organizations improve performance, 
+        optimize operations, and achieve their business goals efficiently.
+      </p>
+
+      <div class="data-points">
+        <ul>
+          <li>Data Cleaning & Processing</li>
+          <li>Exploratory Data Analysis</li>
+          <li>Statistical Modeling</li>
+        </ul>
+
+        <ul>
+          <li>Data Visualization</li>
+          <li>Predictive Analytics</li>
+          <li>Reporting & Insights</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="data-image">
+      <img src="assets/images/data_dev_1.jpg" alt="Data Analytics">
+    </div>
+  </div>
+
+
+  <!-- Business Intelligence (Reversed) -->
+  <div class="bi-section">
+    <div class="bi-image">
+      <img src="assets/images/BI.jpg" alt="Business Intelligence">
+    </div>
+
+    <div class="bi-text">
+      <h2>Business Intelligence (BI)</h2>
+      <p>
+        We offer powerful Business Intelligence solutions that help
+        organizations turn data into strategic insights. By integrating 
+        data from multiple sources, we create interactive dashboards
+        and real-time reports that provide a clear view of business
+        performance. Our BI services enable smarter decision-making
+        by identifying trends, monitoring key metrics, and uncovering
+        growth opportunities. With a focus on accuracy, visualization,
+        and usability, we empower businesses to optimize operations,
+        improve efficiency, and stay ahead in a competitive market.
+      </p>
+
+      <div class="bi-points">
+        <ul>
+          <li>Interactive Dashboards</li>
+          <li>Power BI & Tableau</li>
+          <li>Data Warehousing</li>
+        </ul>
+
+        <ul>
+          <li>Real-time Reporting</li>
+          <li>KPI Monitoring</li>
+          <li>Data Integration</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+    
+
+
+
+  </main>
+  <div id="footer"></div>
+
+    <script>
+    
+ document.addEventListener("DOMContentLoaded", function () {
+
+  // Load header
+   fetch("components/header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header").innerHTML = data;
+
+      /* ===== DROPDOWN JS (MUST BE HERE) ===== */
+      const toggle = document.getElementById("aboutToggle");
+      const dropdown = document.getElementById("aboutDropdown");
+
+      if (toggle && dropdown) {
+        const arrow = toggle.querySelector(".dropdown-arrow");
+
+        toggle.addEventListener("click", function (e) {
+          e.stopPropagation();
+          dropdown.classList.toggle("active");
+          arrow.classList.toggle("rotate");
+        });
+
+        document.addEventListener("click", function (e) {
+          if (!toggle.contains(e.target) && !dropdown.contains(e.target)) {
+            dropdown.classList.remove("active");
+            arrow.classList.remove("rotate");
+          }
+        });
+      }
+    })
+    .catch(err => console.error("Header load failed:", err));
+    
+    
+    
+  // Load footer
+  fetch("components/footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    })
+    .catch(err => console.error("Footer load failed:", err));
+ });
+
+</script>
+
+</body>
+</html>

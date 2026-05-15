@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Carrers</title>
+
+
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/careers.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+
+
+  </head>
+
+  <!-- APPLY FORM MODAL -->
+<div class="apply-modal" id="applyModal">
+  <div class="apply-modal-content">
+
+    <span class="close-modal">&times;</span>
+
+    <h2>Apply for This Position</h2>
+    <p class="modal-subtitle">
+      Fill in the details below and our team will get back to you.
+    </p>
+
+    <form class="apply-form">
+
+      <div class="form-group">
+        <label>Full Name</label>
+        <input id="fullName" type="text" required>
+        <small class="error"></small>
+      </div>
+
+      <div class="form-group">
+        <label>Email Address</label>
+        <input id= "email" type="email" required>
+        <small class="error"></small>
+      </div>
+
+      <div class="form-group">
+        <label>Phone Number</label>
+        <input id="phone" type="tel" required>
+        <small class="error"></small>
+      </div>
+
+      <div class="form-group">
+        <label>Position Applying For</label>
+        <select id="position" required>
+          <option value="">Select Position</option>
+
+          <!-- Technical Roles -->
+          <optgroup label="Technical Roles">
+            <option>Frontend Developer</option>
+            <option>Backend Developer</option>
+            <option>Full Stack Developer</option>
+            <option>DevOps Engineer</option>
+            <option>QA / Test Engineer</option>
+            <option>AI/ML Developer</option>
+          </optgroup>
+
+          <!-- Non Technical Roles -->
+          <optgroup label="Non-Technical Roles">
+            <option>Telecaller / Office Administrator </option>
+            <option>Marketing Executive </option>
+            <option>Social Media executive </option>
+            <option>Driver</option>
+          </optgroup>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Upload Resume</label>
+        <input id="resume" type="file" accept=".pdf,.doc,.docx" required>
+        <small class="error"></small>
+      </div>
+
+      <div class="form-group">
+        <label>LinkedIn Profile (Optional)</label>
+        <input type="url" placeholder="https://linkedin.com/in/username">
+      </div>
+
+      <div class="form-group">
+        <label>Cover Message (0 / 500)</label>
+        <textarea id="coverMessage" maxlength="500"></textarea>
+        <small class="error"></small>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit Application</button>
+    </form>
+
+  </div>
+</div>
+
+
+  <body>
+  <div id="header"></div>
+
+  <main>
+  <section class="career-hero-section">
+  <div class="career-hero-overlay"></div>
+
+  <div class="career-hero-content">
+    <h1>Join Our Team</h1>
+
+    <p>
+      Build the future of technology with passionate innovators. 
+      We're looking<br> for talented individuals who share our vision for creating exceptional 
+    </p>
+
+    <div class="career-hero-features">
+      <div class="career-hero-feature">
+        <i class="fa-solid fa-users"></i>
+        <span>Collaborative Culture</span>
+      </div>
+
+      <div class="career-hero-feature">
+        <i class="fa-solid fa-lightbulb"></i>
+        <span>Innovation First</span>
+      </div>
+
+      <div class="career-hero-feature">
+        <i class="fa-solid fa-rocket"></i>
+        <span>Growth Opportunities</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="contact-features-section">
+  <div class="contact-features-container">
+
+    <h2>Why Work With Us</h2>
+    <p class="section-subtitle">
+     Join a company that values innovation, growth, and work-life balance. 
+     We believe in empowering our team members to reach their full potential.
+    </p>
+
+    <div class="features-grid">
+      <div class="feature-box">
+        <i class="fa-solid fa-clock"></i>
+        <h3>Flexible Working Hours</h3>
+        <p>Work-life balance with flexible schedules and remote work options</p>
+      </div>
+
+      <div class="feature-box">
+        <i class="fa-solid fa-book-open-reader"></i>
+        <h3>Continuous Learning</h3>
+        <p>Access to courses, conferences, and skill development programs</p>
+      </div>
+
+      <div class="feature-box">
+        <i class="fa-solid fa-arrow-trend-up"></i>
+        <h3>Career Growth</h3>
+        <p>Clear advancement paths with mentorship and leadership opportunities</p>
+      </div>
+
+      <div class="feature-box">
+        <i class="fa-solid fa-heart-pulse"></i>
+        <h3>Health & Wellness</h3>
+        <p>Comprehensive health insurance and wellness programs</p>
+      </div>
+
+      <div class="feature-box">
+        <i class="fa-solid fa-people-group"></i>
+        <h3>Collaborative Environment</h3>
+        <p>Work with talented professionals in an inclusive, supportive culture</p>
+      </div>
+
+      <div class="feature-box">
+        <i class="fa-solid fa-gift"></i>
+        <h3>Competitive Benefits</h3>
+        <p>Attractive salary packages with performance bonuses and perks</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="roles-section">
+  <div class="roles-container">
+
+    <h2>Open Positions</h2>
+    <p class="roles-subtitle">
+      Explore exciting career opportunities and find the perfect role for your skills
+    </p>
+
+    <!-- Tabs -->
+    <div class="role-tabs">
+      <button class="role-tab active" data-role="technical">Technical Roles</button>
+      <button class="role-tab" data-role="non-technical">Non-Technical Roles</button>
+    </div>
+
+
+    <!-- TECHNICAL ROLES -->
+    <div class="roles-list active" id="technical">
+
+  <div class="role-card">
+
+  <div class="role-header">
+    <h3>Developers</h3>
+    <span class="toggle-arrow">▾</span>
+  </div>
+
+  <p class="role-desc">
+    Software development for web/app projects. Freshers and experienced candidates may apply.
+  </p>
+
+  <div class="role-details">
+    <h4>Responsibilities</h4>
+
+    <ul class="requirements-list">
+      <li>Design, develop, and maintain software applications</li>
+      <li>Debug, test, and optimize application performance</li>
+      <li>Develop APIs and integrate third-party services</li>
+      <li>Maintain proper documentation of code and processes</li>
+      <li>Participate in requirement analysis and technical design discussions</li>
+      <li>Stay updated with new technologies and industry trends</li>
+    </ul><br>
+
+    <h4>Requirements</h4>
+
+    <ul class="requirements-list">
+      <li>Bachelor’s degree in Computer Science, IT, or related field</li>
+      <li>Strong knowledge of at least one programming language (Java, Python, JavaScript, C#, etc.)</li>
+      <li>Understanding of database management (MySQL, MongoDB, etc.)</li>
+      <li>Basic understanding of frontend/backend technologies</li>
+      <li>Familiarity with version control systems (Git)</li>
+      <li>Willingness to learn and adapt to new technologies</li>
+    </ul>
+
+
+    <div class="role-meta">
+      <span class="meta-item">
+        <i class="fas fa-map-marker-alt"></i> Surat, Gujarat
+      </span>
+      <span class="meta-item">
+        <i class="fas fa-clock"></i> Full Time
+      </span>
+      <span class="meta-item">
+        <i class="fas fa-coins"></i> As per interview
+      </span>
+    </div>
+
+    <button class="apply-btn">Click to Apply</button>
+  </div>
+
+</div>
+
+
+
+   <div class="role-card">
+  <div class="role-header">
+   <h3>AI/ML Developer </h3>
+    <span class="toggle-arrow">▾</span>
+  </div>
+
+  <p class="role-desc">
+    We are seeking a Node JS Developer to build scalable server-side applications 
+    and APIs that power our<br> web and mobile platforms.
+  </p>
+
+  <div class="role-details">
+    <h4>Responsibilities</h4>
+
+    <ul class="requirements-list">
+      <li>Design, develop, and deploy machine learning models</li>
+      <li>Build predictive models and AI-based solutions to solve business problems</li>
+      <li>Train, test, and optimize ML algorithms for performance and accuracy</li>
+      <li>Implement deep learning models (NLP, Computer Vision, etc.) when required</li>
+      <li>Integrate AI models into web or mobile applications</li>
+      <li>Collect, clean, and preprocess structured and unstructured data</li>
+      <li>Stay updated with latest AI/ML trends and technologies</li>
+    </ul><br>
+
+    <h4>Requirements</h4>
+
+    <ul class="requirements-list">
+      <li>Bachelor’s/Master’s degree in Computer Science, IT, Data Science, or related field</li>
+      <li>Strong knowledge of Machine Learning algorithms and concepts</li>
+      <li>Proficiency in Python and ML libraries (NumPy, Pandas, Scikit-learn)</li>
+      <li>Experience with Deep Learning frameworks (TensorFlow, PyTorch)</li>
+      <li>Experience with NLP or Computer Vision projects</li>
+      <li>Knowledge of SQL and working with databases</li>
+      <li>Understanding of data structures, statistics, and probability</li>
+    </ul>
+
+
+    <div class="role-meta">
+      <span class="meta-item">
+        <i class="fas fa-map-marker-alt"></i> Surat, Gujarat
+      </span>
+      <span class="meta-item">
+        <i class="fas fa-clock"></i> Full Time
+      </span>
+      <span class="meta-item">
+        <i class="fas fa-coins"></i> As per interview
+      </span>
+    </div>
+
+    <button class="apply-btn">Click to Apply</button>
+  </div>
+</div>
+
+
+      
+  <div class="role-card">
+  <div class="role-header">
+   <h3>Frontend Developer</h3>
+    <span class="toggle-arrow">▾</span>
+  </div>
+
+  <p class="role-desc">
+    Crafts the parts users see and interact with — slick layouts, smooth navigation, and responsive design.<br> 
+    Think of them as the digital wardrobe stylists of your apps/websites.
+  </p>
+
+  <div class="role-details">
+    <h4>Responsibilities</h4>
+
+    <ul class="requirements-list">
+      <li>Develop responsive web pages using HTML, CSS, and JavaScript.</li>
+      <li>Convert designs into pixel-perfect layouts</li>
+      <li>Ensure cross-browser compatibility</li>
+      <li>Optimize websites for performance and accessibility</li>
+      <li>Work closely with designers and backend developers</li>
+    </ul><br>
+
+    <h4>Requirements</h4>
+
+    <ul class="requirements-list">
+      <li>Strong knowledge of HTML5, CSS3, and JavaScript</li>
+      <li>Experience with frontend frameworks (React, Vue, or Angular is a plus)</li>
+      <li>Understanding of responsive and mobile-first design</li>
+      <li>Familiarity with Git and browser developer tools</li>
+      <li>Attention to detail and UI/UX best practices</li>
+    </ul>
+
+
+    <div class="role-meta">
+      <span class="meta-item">
+        <i class="fas fa-map-marker-alt"></i> Surat, Gujarat
+      </span>
+      <span class="meta-item">
+        <i class="fas fa-clock"></i> Full Time
+      </span>
+      <span class="meta-item">
+        <i class="fas fa-coins"></i> As per interview
+      </span>
+    </div>
+
+    <button class="apply-btn">Click to Apply</button>
+  </div>
+</div>
+
+
+      
+  <div class="role-card">
+  <div class="role-header">
+   <h3>Backend Developer</h3>
+    <span class="toggle-arrow">▾</span>
+  </div>
+
+  <p class="role-desc">
+    Builds the behind-the-scenes machinery — servers, databases, APIs, authentication, logic and data flows. <br>
+    They’re the architects of order in your data universe.
+  </p>
+
+  <div class="role-details">
+    <h4>Responsibilities</h4>
+
+    <ul class="requirements-list">
+      <li>Design and develop backend systems and APIs</li>
+      <li>Manage databases and server integrations</li>
+      <li>Implement authentication and authorization</li>
+      <li>Optimize application performance and reliability</li>
+      <li>Collaborate with frontend and DevOps teams</li>
+    </ul><br>
+
+    <h4>Requirements</h4>
+
+    <ul class="requirements-list">
+      <li>Strong knowledge of backend technologies (Node.js, Java, or PHP)</li>
+      <li>Experience with databases and API development</li>
+      <li>Understanding of server-side architecture</li>
+      <li>Knowledge of security best practices</li>
+      <li>Experience with version control systems</li>
+    </ul>
+
+
+    <div class="role-meta">
+      <span class="meta-item">
+        <i class="fas fa-map-marker-alt"></i> Surat, Gujarat
+      </span>
+      <span class="meta-item">
+        <i class="fas fa-clock"></i> Full Time
+      </span>
+      <span class="meta-item">
+        <i class="fas fa-coins"></i> As per interview
+      </span>
+    </div>
+
+    <button class="apply-btn">Click to Apply</button>
+  </div>
+</div>
+
+
+
+<div class="role-card">
+  <div class="role-header">
+   <h3>Full Stack Developer</h3>
+    <span class="toggle-arrow">▾</span>
+  </div>
+
+  <p class="role-desc">
+    A hybrid hero who dances fluently between front and back. They bring harmony to UI and engines, often ideal for agile teams.
+  </p>
+
+  <div class="role-details">
+    <h4>Responsibilities</h4>
+
+    <ul class="requirements-list">
+      <li>Develop frontend and backend components of applications</li>
+      <li>Design APIs and manage databases</li>
+      <li>Integrate third-party services and tools</li>
+      <li>Ensure application performance and security</li>
+      <li>Participate in code reviews and system design</li>
+    </ul><br>
+
+    <h4>Requirements</h4>
+
+    <ul class="requirements-list">
+      <li>Strong knowledge of frontend and backend technologies</li>
+      <li>Experience with JavaScript frameworks and backend APIs</li>
+      <li>Familiarity with databases and server deployment</li>
+      <li>Understanding of RESTful architecture</li>
+      <li>Ability to work independently and in teams</li>
+    </ul>
+
+
+    <div class="role-meta">
+      <span class="meta-item">
+        <i class="fas fa-map-marker-alt"></i> Surat, Gujarat
+      </span>
+      <span class="meta-item">
+        <i class="fas fa-clock"></i> Full Time
+      </span>
+      <span class="meta-item">
+        <i class="fas fa-coins"></i> As per interview
+      </span>
+    </div>
+
+    <button class="apply-btn">Click to Apply</button>
+  </div>
+</div>
+
+
+
+  <div class="role-card">
+  <div class="role-header">
+   <h3>DevOps Engineer</h3>
+    <span class="toggle-arrow">▾</span>
+  </div>
+
+  <p class="role-desc">
+    Connects code to continuous deployment highways: automation, scaling, monitoring, reliability. <br>
+    They’re the bridge builders between development and operations.
+  </p>
+
+  <div class="role-details">
+    <h4>Responsibilities</h4>
+
+    <ul class="requirements-list">
+      <li>Design, implement, and maintain CI/CD pipelines.</li>
+      <li>Manage cloud infrastructure (AWS, Azure, GCP, etc.)</li>
+      <li>Manage containerization and orchestration tools (Docker, Kubernetes)</li>
+      <li>Monitor system performance and ensure high availability</li>
+      <li>Implement security best practices and system backups</li>
+      <li>Continuously improve system reliability and scalability</li>
+    </ul><br>
+
+    <h4>Requirements</h4>
+
+    <ul class="requirements-list">
+      <li>Bachelor’s degree in Computer Science, IT, or related field.</li>
+      <li>Strong knowledge of Linux/Unix systems</li>
+      <li>Experience with cloud platforms (AWS, Azure, or GCP)</li>
+      <li>Understanding of networking, security, and system administration</li>
+      <li>Familiarity with version control systems (Git)</li>
+      <li>Knowledge of container tools (Docker, Kubernetes)</li>
+      <li>Experience with scripting languages (Bash, Python, Shell)</li>
+      <li>Hands-on experience with CI/CD tools (Jenkins, GitHub Actions, GitLab CI)</li>
+    </ul>
+
+
+    <div class="role-meta">
+      <span class="meta-item">
+        <i class="fas fa-map-marker-alt"></i> Surat, Gujarat
+      </span>
+      <span class="meta-item">
+        <i class="fas fa-clock"></i> Full Time
+      </span>
+      <span class="meta-item">
+        <i class="fas fa-coins"></i> As per interview
+      </span>
+    </div>
+
+    <button class="apply-btn">Click to Apply</button>
+  </div>
+</div>
+
+
+
+<div class="role-card">
+  <div class="role-header">
+   <h3>QA / Test Engineer</h3>
+    <span class="toggle-arrow">▾</span>
+  </div>
+
+  <p class="role-desc">
+    Champions quality — writing test cases, finding bugs, ensuring stability. <br>
+    They’re your software proofreaders before anything goes live.
+  </p>
+
+  <div class="role-details">
+    <h4>Responsibilities</h4>
+
+    <ul class="requirements-list">
+      <li>Perform manual and/or automated testing of applications</li>
+      <li>Collaborate with developers to resolve defects</li>
+      <li>Verify bug fixes and ensure product quality before release</li>
+      <li>Conduct functional, regression, integration, and system testing</li>
+      <li>Ensure software meets quality standards and client requirements</li>
+    </ul><br>
+
+    <h4>Requirements</h4>
+
+    <ul class="requirements-list">
+      <li>Bachelor’s degree in Computer Science, IT, or related field</li>
+      <li>Knowledge of manual and automated testing tools</li>
+      <li>Basic knowledge of programming languages</li>
+      <li>Experience with API testing and database testing is preferred</li>
+      <li>Strong understanding of software testing methodologies</li>
+    </ul>
+
+
+    <div class="role-meta">
+      <span class="meta-item">
+        <i class="fas fa-map-marker-alt"></i> Surat, Gujarat
+      </span>
+      <span class="meta-item">
+        <i class="fas fa-clock"></i> Full Time
+      </span>
+      <span class="meta-item">
+        <i class="fas fa-coins"></i> As per interview
+      </span>
+    </div>
+
+    <button class="apply-btn">Click to Apply</button>
+  </div>
+</div>
+</div>
+
+
+
+
+
+ <!-- NON-TECHNICAL ROLES -->
+     <div class="roles-list" id="non-technical">
+    <div class="role-card">
+
+  <div class="role-header">
+    <h3>Telecaller / Office Administrator </h3>
+    <span class="toggle-arrow">▾</span>
+  </div>
+
+  <p class="role-desc">
+    Handling client communication, follow-ups, and office coordination.
+  </p>
+
+  <div class="role-details">
+    <h4>Responsibilities</h4>
+
+    <ul class="requirements-list">
+      <li>Make outbound calls to potential or existing customers</li>
+      <li>Explain company products/services clearly and professionally</li>
+      <li>Maintain call records, handle emails and update customer details in the system</li>
+      <li>Handle customer inquiries and provide accurate information</li>
+      <li>Manage daily office operations and administrative tasks.</li>
+      <li>Maintain files, documents, and office records</li>
+      <li>Coordinate meetings and maintain appointment schedules</li>
+    </ul><br>
+
+    <h4>Requirements</h4>
+
+    <ul class="requirements-list">
+      <li>Good communication skills (local language + basic English)</li>
+      <li>Basic computer knowledge (MS Office, email handling)</li>
+      <li>Polite and professional telephone manner</li>
+      <li>Strong organizational and multitasking skills</li>
+      <li>Ability to work under targets (for telecalling role)</li>
+      <li>Positive attitude and customer-oriented approach</li>
+    </ul>
+
+    <div class="role-meta">
+      <span class="meta-item">
+        <i class="fas fa-map-marker-alt"></i> Surat, Gujarat
+      </span>
+      <span class="meta-item">
+        <i class="fas fa-clock"></i> Full Time
+      </span>
+      <span class="meta-item">
+        <i class="fas fa-coins"></i> As per interview
+      </span>
+    </div>
+
+    <button class="apply-btn">Click to Apply</button>
+  </div>
+
+</div>
+
+
+
+
+<div class="role-card">
+
+  <div class="role-header">
+    <h3>Marketing Executive </h3>
+    <span class="toggle-arrow">▾</span>
+  </div>
+
+  <p class="role-desc">
+    Field and digital marketing, lead generation, and brand promotion activities.
+  </p>
+
+  <div class="role-details">
+    <h4>Responsibilities</h4>
+
+    <ul class="requirements-list">
+      <li>Develop and implement marketing strategies to promote company products/services</li>
+      <li>Conduct market research to identify new opportunities and customer needs</li>
+      <li>Plan and execute marketing campaigns (online and offline)</li>
+      <li>Coordinate with the sales team to generate leads and increase revenue</li>
+      <li>Create marketing materials such as brochures, presentations, and advertisements</li>
+      <li>Handle digital marketing activities (social media, email marketing, SEO, etc.)</li>
+      <li>Build and maintain strong relationships with clients and partners</li>
+    </ul><br>
+
+    <h4>Requirements</h4>
+
+    <ul class="requirements-list">
+      <li>Bachelor’s degree in Marketing, Business Administration, or related field</li>
+      <li>Knowledge of digital marketing tools and platforms</li>
+      <li>Basic knowledge of MS Office (Word, Excel, PowerPoint)</li>
+      <li>Creative thinking and problem-solving skills</li>
+      <li>Ability to analyze market data and trends</li>
+      <li>Strong communication and negotiation skills</li>
+    </ul>
+
+
+    <div class="role-meta">
+      <span class="meta-item">
+        <i class="fas fa-map-marker-alt"></i> Surat, Gujarat
+      </span>
+      <span class="meta-item">
+        <i class="fas fa-clock"></i> Full Time
+      </span>
+      <span class="meta-item">
+        <i class="fas fa-coins"></i> As per interview
+      </span>
+    </div>
+
+    <button class="apply-btn">Click to Apply</button>
+  </div>
+
+</div>
+
+
+  <div class="role-card">
+
+  <div class="role-header">
+    <h3> Social Media executive </h3>
+    <span class="toggle-arrow">▾</span>
+  </div>
+
+  <p class="role-desc">
+    Managing social platforms, content planning, posting, and basic analytics.
+  </p>
+
+  <div class="role-details">
+    <h4>Responsibilities</h4>
+
+    <ul class="requirements-list">
+      <li>Manage and handle all company social media accounts (Facebook, Instagram, LinkedIn, Twitter, etc.)</li>
+      <li>Collaborate with the design and marketing team for content creation</li>
+      <li>Content creation and campaign management skills</li>
+      <li>Schedule posts using social media management tools</li>
+      <li>Monitor social media trends and competitor activities</li>
+      <li>Improve follower growth, engagement rate, and overall online presence</li>
+    </ul><br>
+
+    <h4>Requirements</h4>
+
+    <ul class="requirements-list">
+      <li>Bachelor’s degree in Marketing or related field</li>
+      <li>Strong knowledge of social media platforms and trends.</li>
+      <li>Understanding of SEO and digital marketing strategies</li>
+      <li>Ability to analyze data and generate insights</li>
+      <li>Time management and multitasking skills</li>
+    </ul>
+
+
+    <div class="role-meta">
+      <span class="meta-item">
+        <i class="fas fa-map-marker-alt"></i> Surat, Gujarat
+      </span>
+      <span class="meta-item">
+        <i class="fas fa-clock"></i> Full Time
+      </span>
+      <span class="meta-item">
+        <i class="fas fa-coins"></i> As per interview
+      </span>
+    </div>
+
+    <button class="apply-btn">Click to Apply</button>
+  </div>
+
+</div>
+
+ 
+  
+  <div class="role-card">
+
+  <!-- Header -->
+  <div class="role-header">
+    <h3> Driver </h3>
+    <span class="toggle-arrow">▾</span>
+  </div>
+
+  <p class="role-desc">
+    Company-related driving duties with responsibility and route awareness.
+  </p>
+
+  <!-- Hidden content -->
+  <div class="role-details">
+    <h4>Responsibilities</h4>
+
+    <ul class="requirements-list">
+      <li>Follow planned routes and ensure timely arrival.</li>
+      <li>Maintain awareness of traffic rules and road safety regulations</li>
+      <li>Maintain accurate trip logs, mileage records, and fuel consumption details</li>
+      <li>Plan alternate routes in case of traffic, roadblocks, or delays</li>
+      <li>Report any vehicle damage, accidents, or mechanical issues immediately</li>
+      <li>Maintain professional behavior while representing the company</li>
+    </ul><br>
+
+    <h4>Requirements</h4>
+
+    <ul class="requirements-list">
+      <li>Good knowledge of local routes and traffic laws</li>
+      <li>Basic vehicle maintenance knowledge</li>
+      <li>Ability to handle long-distance driving (if required)</li>
+      <li>Good communication skills</li>
+      <li>Clean driving record with no major violations</li>
+    </ul>
+
+    <div class="role-meta">
+      <span class="meta-item">
+        <i class="fas fa-map-marker-alt"></i> Surat, Gujarat
+      </span>
+      <span class="meta-item">
+        <i class="fas fa-clock"></i> Full Time
+      </span>
+      <span class="meta-item">
+        <i class="fas fa-coins"></i> As per interview
+      </span>
+    </div>
+
+    <button class="apply-btn">Click to Apply</button>
+  </div>
+
+</div>
+
+</div>
+
+
+</section>
+
+
+
+<section class="resume-section">
+  <div class="resume-container">
+
+    <h2>Didn’t Find the Right Role?</h2>
+    <p class="resume-subtitle">
+      We're always looking for talented individuals to join our growing team. 
+      Send us your resume and let us know how you'd like to contribute to our mission.
+    </p>
+
+    <div class="resume-card">
+      <h3>Send Us Your Resume</h3>
+      <p>
+        Even if there's no perfect match right now, we'll keep your information on file for 
+        future opportunities that align with your skills and interests.
+      </p>
+
+      <button class="resume-btn">
+        <i class="fas fa-paper-plane"></i>
+        Send Resume
+      </button>
+    </div>
+
+  </div>
+</section>
+
+
+
+  </main>
+  <div id="footer"></div>
+
+  
+  
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+
+  /* =========================
+     LOAD HEADER
+  ========================= */
+  fetch("components/header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header").innerHTML = data;
+    })
+    .catch(err => console.error("Header load failed:", err));
+
+
+ /* =========================
+     LOAD FOOTER
+  ========================= */
+  fetch("components/footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    })
+    .catch(err => console.error("Footer load failed:", err));
+});
+
+
+/* =========================
+     ROLE TABS
+  ========================= */
+
+const tabs = document.querySelectorAll(".role-tab");
+const lists = document.querySelectorAll(".roles-list");
+
+tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    tabs.forEach(t => t.classList.remove("active"));
+    lists.forEach(l => l.classList.remove("active"));
+
+    tab.classList.add("active");
+    document.getElementById(tab.dataset.role).classList.add("active");
+  });
+});
+
+
+
+/* =========================
+     APPLY MODAL
+  ========================= */
+
+document.addEventListener("DOMContentLoaded", function () {
+  const modal = document.getElementById("applyModal");
+  const closeBtn = document.querySelector(".close-modal");
+  const applyButtons = document.querySelectorAll(".apply-btn");
+
+  function closeModal() {
+    modal.classList.remove("active");
+    document.body.style.overflow = "auto";
+  }
+
+  /* OPEN MODAL */
+  applyButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      modal.classList.add("active");
+      document.body.style.overflow = "hidden";
+    });
+  });
+
+  /* CLOSE MODAL -  */
+  closeBtn.addEventListener("click", closeModal);
+
+  /* CLOSE MODAL - click outside */
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+});
+
+/* =========================
+     ROLE TOGGLE (ACCORDION) 
+  ========================= */
+
+  
+document.querySelectorAll(".role-card").forEach(card => {
+    const header = card.querySelector(".role-header");
+
+    if (header) {
+      header.addEventListener("click", () => {
+        card.classList.toggle("active");
+      });
+    }
+  });
+
+
+
+  </script>
+  <script src="assets/js/main.js"></script>
+
+  </body>

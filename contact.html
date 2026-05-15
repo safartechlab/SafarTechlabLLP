@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SafarTechlabLLP</title>
+
+
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/contact.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  
+
+
+
+
+  </head>
+  <body>
+    <div id="header"></div>
+    <main>
+
+    <section class="contact-hero-section">
+  <div class="contact-hero-overlay"></div>
+
+  <div class="contact-hero-content">
+    <h1>Contact Us</h1>
+
+    <p>
+      We'd love to hear from you. Reach out to discuss your project,<br>
+      ask questions, or explore how we can help bring your ideas to life.
+    </p>
+
+    <div class="contact-hero-features">
+      <div class="contact-hero-feature">
+        <i class="fas fa-headset"></i>
+        <span>Expert Support</span>
+      </div>
+
+      <div class="contact-hero-feature">
+        <i class="fas fa-bolt"></i>
+        <span>Quick Response</span>
+      </div>
+
+      <div class="contact-hero-feature">
+        <i class="fas fa-globe"></i>
+        <span>Global Reach</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="contact-info-section">
+  <div class="contact-info-container">
+
+    <h2 class="contact-info-title">Get in Touch</h2>
+    <p class="contact-info-subtitle">
+      Multiple ways to reach us. Choose the method that works best for you.
+    </p>
+
+    <div class="contact-info-grid">
+
+      <!-- Phone -->
+      <div class="contact-info-box">
+        <i class="fas fa-phone-alt"></i>
+        <h4>Phone Numbers</h4>
+        <p>
+          ++91 963 888 1975<br>
+          +91 +91 997 978 1975
+        </p>
+      </div>
+
+      <!-- Email -->
+      <div class="contact-info-box">
+        <i class="fas fa-envelope"></i>
+        <h4>Email Address</h4>
+        <p>
+          safartechlab@gmail.com<br>
+          support@safartechlab.com
+        </p>
+      </div>
+
+      <!-- Address -->
+      <div class="contact-info-box">
+        <i class="fas fa-map-marker-alt"></i>
+        <h4>Office Address</h4>
+        <p>
+          140, Aadinath Arcade,<br>
+          Honey Park Road, Adajan<br>
+          Surat - 395 009, Gujarat,<br>
+          India
+        </p>
+      </div>
+
+      <!-- Working Hours -->
+      <div class="contact-info-box">
+        <i class="fas fa-clock"></i>
+        <h4>Working Hours</h4>
+        <p>
+          Monday – Friday<br>
+          10:00 AM – 7:00 PM<br>
+          Saturday: 10:00 AM - 4:00 PM
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="contact-social-section">
+  <h3 class="contact-social-heading">Follow Us</h3>
+
+  <div class="contact-social-icons">
+    <a href="https://www.linkedin.com/in/safar-techlab-llp-442846377/" aria-label="LinkedIn">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+
+    <a href="https://www.instagram.com/safar_techlab_llp" aria-label="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+
+    <!-- <a href="#" aria-label="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a> -->
+
+    <!-- <a href="#" aria-label="Facebook">
+      <i class="fab fa-facebook-f"></i>
+    </a> -->
+  </div>
+</div>
+
+<section class="contact-intro-section">
+  <div class="contact-intro-container">
+    <h2>Send Us a Message</h2>
+    <p>
+      Have a project in mind or need expert assistance? 
+      Reach out to us and we’ll respond as quickly as possible. 
+    </p>
+  </div>
+</section>
+
+
+<section class="contact-form-section">
+  <div class="contact-form-container">
+
+    <form class="contact-form" id="contactForm" novalidate>
+
+      <!-- Row -->
+      <div class="contact-form-row">
+        <div class="contact-form-group">
+          <label>Full Name</label>
+          <input type="text" id="fullName" name="full_name" placeholder="Enter your full name">
+          <small class="error-text"></small>
+        </div>
+
+        <div class="contact-form-group">
+          <label>Email Address</label>
+          <input type="email" id="email" name="email" placeholder="Enter your email">
+          <small class="error-text"></small>
+        </div>
+      </div>
+
+      <!-- Subject -->
+      <div class="contact-form-group">
+        <label>Subject</label>
+        <select id="subject" name="subject">
+          <option value="">Select a subject</option>
+          <option>General Enquiry</option>
+          <option>Project Discussion</option>
+          <option>Technical Support</option>
+          <option>Partnership Oppurtunity</option>
+          <option>Career Information</option>
+          <option>Other</option>
+
+        </select>
+        <small class="error-text"></small>
+      </div>
+
+      <!-- Message -->
+      <div class="contact-form-group">
+        <label>Message</label>
+        <textarea id="message" name="message" maxlength="500" placeholder="Tell us about your project,questions, or how we can help..."></textarea>
+        <div class="char-count">
+          <span id="charCount">0</span>/500
+        </div>
+        <small class="error-text"></small>
+      </div>
+
+      <button type="submit" class="contact-form-btn">Send Message</button>
+    </form>
+
+  </div>
+</section>
+
+       
+
+
+    </main>
+
+     <div id="footer"></div>
+
+     <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+  // Load header
+  fetch("components/header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header").innerHTML = data;
+    })
+    .catch(err => console.error("Header load failed:", err));
+
+  // Load footer
+  fetch("components/footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    })
+    .catch(err => console.error("Footer load failed:", err));
+});
+
+
+const form = document.getElementById("contactForm");
+const nameInput = document.getElementById("fullName");
+const emailInput = document.getElementById("email");
+const subjectInput = document.getElementById("subject");
+const messageInput = document.getElementById("message");
+const charCount = document.getElementById("charCount");
+
+/* Character Counter */
+messageInput.addEventListener("input", () => {
+  charCount.textContent = messageInput.value.length;
+});
+
+/* Validation */
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  let isValid = true;
+
+  clearErrors();
+
+  if (nameInput.value.trim() === "") {
+    showError(nameInput, "Full name is required");
+    isValid = false;
+  }
+
+  if (!validateEmail(emailInput.value)) {
+    showError(emailInput, "Valid email is required");
+    isValid = false;
+  }
+
+  if (subjectInput.value === "") {
+    showError(subjectInput, "Please select a subject");
+    isValid = false;
+  }
+
+  if (messageInput.value.trim() === "") {
+    showError(messageInput, "Message cannot be empty");
+    isValid = false;
+  }
+
+  if (isValid) {
+  emailjs.sendForm(
+    "YOUR_SERVICE_ID",
+    "YOUR_TEMPLATE_ID",
+    form
+  )
+  .then(() => {
+    alert("Message sent successfully!");
+    form.reset();
+    charCount.textContent = 0;
+  })
+  .catch(() => {
+    alert("Failed to send message. Please try again.");
+  });
+}
+
+});
+
+/* Helpers */
+function showError(input, message) {
+  input.nextElementSibling.textContent = message;
+}
+
+function clearErrors() {
+  document.querySelectorAll(".error-text").forEach(el => el.textContent = "");
+}
+
+function validateEmail(email) {
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+}
+
+</script>
+
+<script src="assets/js/main.js"></script>
+  </body>

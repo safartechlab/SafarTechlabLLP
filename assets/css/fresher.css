@@ -1,0 +1,314 @@
+/* =========================
+   TRAINEE GUIDELINES
+========================= */
+
+.trainee-guidelines{
+    width: 100%;
+    padding: 120px 0 80px;
+    background: #f5f7fb;
+}
+
+.trainee-guidelines .container{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+
+/* =========================
+   PAGE TITLE
+========================= */
+
+.trainee-guidelines h1{
+    font-size: 40px;
+    font-weight: 700;
+    color: #111827;
+    text-align: center;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.trainee-guidelines h3{
+    font-size: 22px;
+    font-weight: 600;
+    color: #2563eb;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   TOP DESCRIPTION
+========================= */
+
+.trainee-guidelines > .container > p{
+    font-size: 17px;
+    line-height: 1.9;
+    color: #4b5563;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+/* Large Tablet */
+@media (max-width: 992px){
+
+    .trainee-guidelines{
+        padding: 100px 0 70px;
+    }
+
+    .trainee-guidelines .container{
+        width: 92%;
+    }
+
+    .trainee-guidelines h1{
+        font-size: 34px;
+        margin-top: 70px;
+    }
+
+    .trainee-guidelines h3{
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+
+    .trainee-guidelines > .container > p{
+        font-size: 16px;
+        line-height: 1.8;
+        text-align: center;
+    }
+}
+
+
+/* Tablet */
+@media (max-width: 768px){
+
+    .trainee-guidelines{
+        padding: 90px 0 60px;
+    }
+
+    .trainee-guidelines .container{
+        width: 94%;
+    }
+
+    .trainee-guidelines h1{
+        font-size: 30px;
+        margin-top: 70px;
+    }
+
+    .trainee-guidelines h3{
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 22px;
+    }
+
+    .trainee-guidelines > .container > p{
+        font-size: 15px;
+        line-height: 1.8;
+        margin-bottom: 14px;
+        text-align: center;
+    }
+}
+
+
+/* Mobile */
+@media (max-width: 576px){
+
+    .trainee-guidelines{
+        padding: 80px 0 50px;
+    }
+
+    .trainee-guidelines .container{
+        width: 92%;
+    }
+
+    .trainee-guidelines h1{
+        font-size: 26px;
+        line-height: 1.3;
+        margin-top: 70px;
+    }
+
+    .trainee-guidelines h3{
+        font-size: 17px;
+        margin-bottom: 20px;
+    }
+
+    .trainee-guidelines > .container > p{
+        font-size: 14px;
+        line-height: 1.7;
+        text-align: center;
+
+    }
+}
+
+
+
+
+/* =========================
+   BOX DESIGN
+========================= */
+
+.trainee-box{
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 35px;
+    margin-top: 35px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.trainee-box:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+
+/* =========================
+   SECTION TITLE
+========================= */
+
+.trainee-box h2{
+    font-size: 22px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+
+/* =========================
+   TEXT
+========================= */
+
+.trainee-box p{
+    font-size: 16px;
+    line-height: 1.9;
+    color: #4b5563;
+    margin-bottom: 18px;
+}
+
+.trainee-box .intro-text{
+    font-weight: 500;
+    color: #1f2937;
+}
+
+
+/* =========================
+   LISTS
+========================= */
+
+.trainee-box ul{
+    padding-left: 22px;
+    margin-bottom: 18px;
+}
+
+.trainee-box ul li{
+    font-size: 16px;
+    line-height: 1.9;
+    color: #4b5563;
+    margin-bottom: 12px;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 992px){
+
+    .trainee-guidelines{
+        padding: 100px 0 70px;
+    }
+
+    .trainee-guidelines h1{
+        font-size: 40px;
+    }
+
+    .trainee-box{
+        padding: 30px;
+    }
+
+    .trainee-box h2{
+        font-size: 24px;
+    }
+}
+
+
+@media (max-width: 768px){
+
+    .trainee-guidelines{
+        padding: 90px 0 60px;
+    }
+
+    .trainee-guidelines .container{
+        width: 92%;
+    }
+
+    .trainee-guidelines h1{
+        font-size: 34px;
+    }
+
+    .trainee-guidelines h3{
+        font-size: 18px;
+    }
+
+    .trainee-guidelines > .container > p{
+        font-size: 15px;
+    }
+
+    .trainee-box{
+        padding: 25px;
+        border-radius: 16px;
+    }
+
+    .trainee-box h2{
+        font-size: 22px;
+    }
+
+    .trainee-box p,
+    .trainee-box ul li{
+        font-size: 15px;
+        line-height: 1.8;
+    }
+}
+
+
+@media (max-width: 576px){
+
+    .trainee-guidelines{
+        padding: 80px 0 50px;
+    }
+
+    .trainee-guidelines h1{
+        font-size: 28px;
+    }
+
+    .trainee-guidelines h3{
+        font-size: 16px;
+    }
+
+    .trainee-box{
+        padding: 22px 18px;
+        margin-top: 25px;
+        border-radius: 14px;
+    }
+
+    .trainee-box h2{
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .trainee-box p,
+    .trainee-box ul li{
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .trainee-box ul{
+        padding-left: 18px;
+    }
+}

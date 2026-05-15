@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mobile App Development</title>
+
+  <link rel="stylesheet" href="assets/css/global.css">
+  <link rel="stylesheet" href="assets/css/home.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/mob_dev.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+</head>
+
+<body>
+
+
+    <div id="header"></div>
+    <main>
+
+    <section class="mobile-hero">
+
+    <div class="mobile-hero-overlay"></div>
+
+    <div class="mobile-hero-content">
+    <h1>Mobile App Development</h1>
+    <p>
+      We build high-performance, scalable, and user-friendly mobile applications 
+      that deliver seamless digital experiences across Android and iOS platforms.
+    </p>
+    </div>
+    </section>
+
+
+
+   <!-- ===============================
+   MOBILE DEVELOPMENT SERVICES
+================================= -->
+
+<section class="services">
+
+  <!-- Android Development -->
+  <div class="android-section">
+    <div class="android-text">
+      <h2>Android Development</h2>
+      <p>
+       We provide end-to-end Android app development services tailored to meet your business needs.
+       Our team specializes in building high-performance, user-friendly, and scalable mobile 
+       applications that deliver seamless experiences across all Android devices.
+       From idea to deployment, we focus on creating innovative and feature-rich apps 
+       using the latest technologies and best industry practices. Whether you need a 
+       simple application or a complex enterprise solution, we ensure reliability, 
+       security, and top-notch performance.
+      </p>
+
+      <div class="android-points">
+        <ul>
+          <li>Custom Android Apps</li>
+          <li>UI/UX Design</li>
+          <li>App Maintenance</li>
+        </ul>
+
+        <ul>
+          <li>API Integration</li>
+          <li>App Testing</li>
+          <li>Play Store Deployment</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="android-image">
+      <img src="assets/images/android.jpg" alt="Android Development">
+    </div>
+  </div>
+
+
+  <!-- iOS Development -->
+  <div class="ios-section">
+    <div class="ios-image">
+      <img src="assets/images/ios.jpg" alt="iOS Development">
+    </div>
+
+    <div class="ios-text">
+      <h2>iOS Development</h2>
+      <p>
+        We offer high-quality iOS app development services to help businesses 
+        build powerful, secure, and user-friendly applications for Apple devices. 
+        Our team focuses on delivering smooth performance and elegant designs that 
+        align with Apple’s standards and user expectations.
+        From concept to launch, we develop custom iOS applications 
+        using modern technologies and best practices to ensure scalability, 
+        speed, and reliability. Whether it’s an iPhone or iPad app, we create 
+        solutions that provide a seamless and engaging user experience.
+      </p>
+
+      <div class="ios-points">
+        <ul>
+          <li>Custom iPhone Apps</li>
+          <li>Swift Development</li>
+          <li>UI/UX Optimization</li>
+        </ul>
+
+        <ul>
+          <li>App Store Deployment</li>
+          <li>API Integration</li>
+          <li>Maintenance & Support</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Flutter Development -->
+  <div class="flutter-section">
+    <div class="flutter-text">
+      <h2>Flutter Development</h2>
+      <p>
+        We provide modern and efficient Flutter app development services 
+        to build high-quality cross-platform applications for both Android 
+        and iOS. Using a single codebase, we create fast, scalable, and 
+        visually appealing apps that deliver a native-like experience 
+        across multiple devices.
+
+        Our team leverages Flutter’s powerful UI toolkit to design 
+        responsive and engaging interfaces while ensuring smooth performance 
+        and reduced development time. Whether you’re a startup or an 
+        enterprise, we develop customized solutions that match your 
+        business goals.
+      </p>
+
+      <div class="flutter-points">
+        <ul>
+          <li>Cross Platform Apps</li>
+          <li>Fast Development</li>
+          <li>Beautiful UI</li>
+        </ul>
+
+        <ul>
+          <li>Single Codebase</li>
+          <li>API Integration</li>
+          <li>Frontend and backend development tools</li>
+          
+        </ul>
+      </div>
+    </div>
+
+    <div class="flutter-image">
+      <img src="assets/images/flutter.jpg" alt="Flutter Development">
+    </div>
+  </div>
+
+</section>
+
+
+
+  </main>
+  <div id="footer"></div>
+
+    <script>
+    
+ document.addEventListener("DOMContentLoaded", function () {
+
+  // Load header
+   fetch("components/header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("header").innerHTML = data;
+
+      /* ===== DROPDOWN JS (MUST BE HERE) ===== */
+      const toggle = document.getElementById("aboutToggle");
+      const dropdown = document.getElementById("aboutDropdown");
+
+      if (toggle && dropdown) {
+        const arrow = toggle.querySelector(".dropdown-arrow");
+
+        toggle.addEventListener("click", function (e) {
+          e.stopPropagation();
+          dropdown.classList.toggle("active");
+          arrow.classList.toggle("rotate");
+        });
+
+        document.addEventListener("click", function (e) {
+          if (!toggle.contains(e.target) && !dropdown.contains(e.target)) {
+            dropdown.classList.remove("active");
+            arrow.classList.remove("rotate");
+          }
+        });
+      }
+    })
+    .catch(err => console.error("Header load failed:", err));
+    
+    
+    
+  // Load footer
+  fetch("components/footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    })
+    .catch(err => console.error("Footer load failed:", err));
+ });
+
+</script>
+
+</body>
+</html>
