@@ -204,6 +204,8 @@ main {
   transform: translateY(-100%);
 }
 
+
+
 /* =========================
    INFO SECTION
 ========================= */
@@ -729,6 +731,14 @@ main {
   .hero-title,
   .hero-content h1 {
     font-size: 48px;
+  }
+
+  .hero-section{
+    min-height: 85vh;
+  }
+
+  .text-rotate{
+    padding-bottom: 87px;
   }
 }
 

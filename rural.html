@@ -380,6 +380,25 @@ document.addEventListener("DOMContentLoaded", () => {
   setInterval(autoSlide, 2000);
 
 });
+
+
+
+fetch("./components/header.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("header").innerHTML = data;
+  });
+
+document.addEventListener("click", function (e) {
+
+  if (e.target && e.target.id === "menuToggle") {
+
+    const navMenu = document.getElementById("navMenu");
+
+    navMenu.classList.toggle("active");
+  }
+
+});
 </script>
 
 </body>

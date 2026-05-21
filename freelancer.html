@@ -268,32 +268,6 @@
 
     </div>
 
-
-    <!-- 12 -->
-    <div class="guideline-box">
-
-      <h2>12. Declaration</h2>
-
-      <p class="intro-text">
-        I confirm that:
-      </p>
-
-      <ul>
-        <li>I have read and understood these guidelines</li>
-
-        <li>
-          I agree to maintain confidentiality and professionalism
-        </li>
-
-        <li>
-          I understand that my association with SAFAR TECHLAB LLP
-          is project-based and non-permanent unless otherwise
-          officially confirmed
-        </li>
-      </ul>
-
-    </div>
-
   </div>
 </section>
 
@@ -344,6 +318,27 @@
     })
     .catch(err => console.error("Footer load failed:", err));
  });
+
+
+fetch("./components/header.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("header").innerHTML = data;
+  });
+
+document.addEventListener("click", function (e) {
+
+  if (e.target && e.target.id === "menuToggle") {
+
+    const navMenu = document.getElementById("navMenu");
+
+    navMenu.classList.toggle("active");
+  }
+
+});
+
+
+
  </script>
 
 

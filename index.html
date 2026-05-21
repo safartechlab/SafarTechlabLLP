@@ -160,7 +160,7 @@
             Custom web applications built with modern 
             technologies for optimal performance and user experience.
           </p>
-          <a href="services.html" class="learn-more">Learn More
+          <a href="web_dev.html" class="learn-more">Learn More
             <span class="arrow">→</span>
           </a>
         </div>
@@ -176,7 +176,7 @@
             Native and cross-platform mobile apps that 
             deliver exceptional user experiences across all devices.
           </p>
-          <a href="services.html" class="learn-more">Learn More
+          <a href="mob_dev.html" class="learn-more">Learn More
             <span class="arrow">→</span>
           </a>
         </div>
@@ -192,7 +192,7 @@
             Scalable cloud infrastructure and migration 
             services to optimize your business operations.
           </p>
-          <a href="services.html" class="learn-more">Learn More
+          <a href="cloud_dev.html" class="learn-more">Learn More
             <span class="arrow">→</span>
           </a>
         </div>
@@ -208,7 +208,7 @@
             Transform your data into actionable insights with our 
             advanced analytics and reporting solutions.
           </p>
-          <a href="services.html" class="learn-more">Learn More
+          <a href="data_analytics_dev.html" class="learn-more">Learn More
             <span class="arrow">→</span>
           </a>
         </div>
@@ -223,7 +223,7 @@
           <p>
             Intelligent automation and machine learning solutions to drive innovation and efficiency.
           </p>
-          <a href="services.html" class="learn-more">Learn More
+          <a href="AI_ML.html" class="learn-more">Learn More
             <span class="arrow">→</span>
           </a>
         </div>
@@ -400,26 +400,25 @@ counters.forEach(counter => {
 });
 
 
-
-const cards = document.querySelectorAll(".card");
-
-window.addEventListener("scroll", () => {
-  const triggerPoint = window.innerHeight * 0.6;
-
-  cards.forEach((card, index) => {
-    const rect = card.getBoundingClientRect();
-
-    if (rect.top <= triggerPoint && rect.bottom >= triggerPoint) {
-      card.classList.add("active");
-      card.classList.remove("shrink");
-    } else if (rect.top < triggerPoint) {
-      card.classList.remove("active");
-      card.classList.add("shrink");
-    } else {
-      card.classList.remove("active", "shrink");
-    }
+fetch("./components/header.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("header").innerHTML = data;
   });
-});  
+
+document.addEventListener("click", function (e) {
+
+  if (e.target && e.target.id === "menuToggle") {
+
+    const navMenu = document.getElementById("navMenu");
+
+    navMenu.classList.toggle("active");
+  }
+
+}); 
+
+
+
 </script>
 
 

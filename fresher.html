@@ -313,36 +313,6 @@
 
     </div>
 
-
-
-    <!-- 12 -->
-    <div class="trainee-box">
-
-      <h2>12. Declaration</h2>
-
-      <p class="intro-text">
-        I confirm that:
-      </p>
-
-      <ul>
-        <li>
-          I have read and understood these guidelines
-        </li>
-
-        <li>
-          I agree to maintain professionalism
-          and confidentiality
-        </li>
-
-        <li>
-          I understand that this is a temporary
-          learning/training association unless
-          otherwise officially confirmed by the Company
-        </li>
-      </ul>
-
-    </div>
-
   </div>
 
 </section>
@@ -393,6 +363,26 @@
     })
     .catch(err => console.error("Footer load failed:", err));
  });
+
+
+fetch("./components/header.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("header").innerHTML = data;
+  });
+
+document.addEventListener("click", function (e) {
+
+  if (e.target && e.target.id === "menuToggle") {
+
+    const navMenu = document.getElementById("navMenu");
+
+    navMenu.classList.toggle("active");
+  }
+
+});
+
+
  </script>
 
 

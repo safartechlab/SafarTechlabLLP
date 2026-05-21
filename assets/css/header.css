@@ -4,45 +4,38 @@
   box-sizing: border-box;
 }
 
-body{
-  font-family: Arial, sans-serif;
-}
-
-/* =========================
-   HEADER
-========================= */
-
+/* HEADER */
 .site-header{
-  width: 100%;
   background: #111827;
+
   position: fixed;
   top: 0;
   left: 0;
+
+  width: 100%;
   z-index: 1000;
 }
 
+/* CONTAINER */
 .header-container{
-  width: 90%;
   max-width: 1200px;
   margin: auto;
+
+  padding: 20px 40px;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  padding: 18px 0;
-
   position: relative;
+  flex-wrap: wrap;
 }
 
-/* =========================
-   LOGO
-========================= */
-
+/* LOGO */
 .logo-area{
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
 }
 
 .logo{
@@ -50,88 +43,124 @@ body{
 }
 
 .brand-name{
-  color: white;
+  color: #fff;
   font-size: 22px;
   font-weight: 600;
 }
 
-/* =========================
-   DESKTOP MENU
-========================= */
-
+/* DESKTOP MENU */
 .nav-menu{
   display: flex;
-  gap: 30px;
+  gap: 25px;
 }
 
 .nav-menu a{
-  color: white;
+  color: #fff;
   text-decoration: none;
   font-size: 16px;
-  transition: 0.3s;
 }
 
 .nav-menu a:hover{
-  color: #38bdf8;
+  color: #787af0;
 }
 
-/* =========================
-   HAMBURGER
-========================= */
-
+/* HAMBURGER */
 .menu-toggle{
   display: none;
-  color: white;
-  font-size: 32px;
+  font-size: 30px;
+  color: #fff;
   cursor: pointer;
 }
+
+
 
 /* =========================
    MOBILE
 ========================= */
 
-@media(max-width: 992px){
+/* =========================
+   MOBILE
+========================= */
 
-  .menu-toggle{
-    display: block;
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 992px){
+
+  /* HEADER DEFAULT */
+  .site-header{
+    position: fixed;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    background: #111827;
+
+    transition: all 0.3s ease;
   }
 
-  .nav-menu{
-    position: absolute;
-    top: 100%;
+  /* FIXED ON SCROLL */
+  .site-header.fixed{
+    position: fixed;
+    top: 0;
     left: 0;
 
     width: 100%;
+  }
+
+
+
+  /* CONTAINER */
+  .header-container{
+    width: 100%;
+    padding: 18px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  /* MENU BUTTON */
+  .menu-toggle{
+    display: block;
+    cursor: pointer;
+  }
+
+  /* MOBILE MENU */
+  .nav-menu{
+    width: 100%;
     background: #111827;
 
-    display: none;
+    display: flex;
     flex-direction: column;
 
-    padding: 10px 0;
+    height: 0;
+    overflow: hidden;
+
+    opacity: 0;
+
+    transition:
+      height 0.45s ease,
+      opacity 0.3s ease;
+
+    gap: 0;
   }
 
+  /* ACTIVE */
   .nav-menu.active{
-    display: flex;
+    height: 270px;
+    opacity: 1;
   }
 
+  /* LINKS */
   .nav-menu a{
     width: 100%;
-    padding: 15px 20px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-  }
-}
+    padding: 18px 25px;
 
-/* =========================
-   SMALL MOBILE
-========================= */
-
-@media(max-width: 576px){
-
-  .brand-name{
-    font-size: 16px;
-  }
-
-  .logo{
-    height: 34px;
+    color: #fff;
+    text-decoration: none;
   }
 }

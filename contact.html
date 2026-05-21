@@ -10,7 +10,6 @@
   <link rel="stylesheet" href="assets/css/header.css">
   <link rel="stylesheet" href="assets/css/footer.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   
 
 
@@ -67,8 +66,7 @@
         <i class="fas fa-phone-alt"></i>
         <h4>Phone Numbers</h4>
         <p>
-          ++91 963 888 1975<br>
-          +91 +91 997 978 1975
+          +91 963 888 1975
         </p>
       </div>
 
@@ -76,10 +74,11 @@
       <div class="contact-info-box">
         <i class="fas fa-envelope"></i>
         <h4>Email Address</h4>
-        <p>
-          safartechlab@gmail.com<br>
-          support@safartechlab.com
-        </p>
+         <p>
+         <a href="mailto:safartechlab@gmail.com">
+          safartechlab@gmail.com
+         </a>
+         </p>
       </div>
 
       <!-- Address -->
@@ -87,7 +86,7 @@
         <i class="fas fa-map-marker-alt"></i>
         <h4>Office Address</h4>
         <p>
-          140, Aadinath Arcade,<br>
+          410, Aadinath Arcade,<br>
           Honey Park Road, Adajan<br>
           Surat - 395 009, Gujarat,<br>
           India
@@ -112,7 +111,7 @@
   <h3 class="contact-social-heading">Follow Us</h3>
 
   <div class="contact-social-icons">
-    <a href="https://www.linkedin.com/in/safar-techlab-llp-442846377/" aria-label="LinkedIn">
+    <a href= "https://www.linkedin.com/company/safar-techlab-llp/posts/?feedView=all" target="_blank">
       <i class="fab fa-linkedin-in"></i>
     </a>
 
@@ -221,75 +220,83 @@
 });
 
 
-const form = document.getElementById("contactForm");
-const nameInput = document.getElementById("fullName");
-const emailInput = document.getElementById("email");
-const subjectInput = document.getElementById("subject");
-const messageInput = document.getElementById("message");
-const charCount = document.getElementById("charCount");
 
-/* Character Counter */
-messageInput.addEventListener("input", () => {
-  charCount.textContent = messageInput.value.length;
-});
 
-/* Validation */
-form.addEventListener("submit", function (e) {
+// contact form
+
+const contactForm = document.getElementById("contactForm");
+
+contactForm.addEventListener("submit", async (e) => {
+
   e.preventDefault();
-  let isValid = true;
 
-  clearErrors();
+  const formData = {
 
-  if (nameInput.value.trim() === "") {
-    showError(nameInput, "Full name is required");
-    isValid = false;
+    full_name: document.getElementById("fullName").value,
+
+    email: document.getElementById("email").value,
+
+    subject: document.getElementById("subject").value,
+
+    message: document.getElementById("message").value
+
+  };
+
+  try {
+
+    const response = await fetch("/contact-message", {
+
+      method: "POST",
+
+      headers: {
+        "Content-Type": "application/json"
+      },
+
+      body: JSON.stringify(formData)
+
+    });
+
+    const result = await response.json();
+
+    alert(result.message);
+
+    if(result.success){
+
+      contactForm.reset();
+
+      document.getElementById("charCount").innerText = "0";
+
+    }
+
+  } catch (error) {
+
+    console.log(error);
+
+    alert("Something went wrong");
+
   }
-
-  if (!validateEmail(emailInput.value)) {
-    showError(emailInput, "Valid email is required");
-    isValid = false;
-  }
-
-  if (subjectInput.value === "") {
-    showError(subjectInput, "Please select a subject");
-    isValid = false;
-  }
-
-  if (messageInput.value.trim() === "") {
-    showError(messageInput, "Message cannot be empty");
-    isValid = false;
-  }
-
-  if (isValid) {
-  emailjs.sendForm(
-    "YOUR_SERVICE_ID",
-    "YOUR_TEMPLATE_ID",
-    form
-  )
-  .then(() => {
-    alert("Message sent successfully!");
-    form.reset();
-    charCount.textContent = 0;
-  })
-  .catch(() => {
-    alert("Failed to send message. Please try again.");
-  });
-}
 
 });
 
-/* Helpers */
-function showError(input, message) {
-  input.nextElementSibling.textContent = message;
-}
 
-function clearErrors() {
-  document.querySelectorAll(".error-text").forEach(el => el.textContent = "");
-}
+fetch("./components/header.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("header").innerHTML = data;
+  });
 
-function validateEmail(email) {
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-}
+document.addEventListener("click", function (e) {
+
+  if (e.target && e.target.id === "menuToggle") {
+
+    const navMenu = document.getElementById("navMenu");
+
+    navMenu.classList.toggle("active");
+  }
+
+});
+
+
 
 </script>
 

@@ -823,8 +823,8 @@
   position: relative;
   text-align: center;
   color: #ffffff;
-  margin-bottom: -201px;
-  margin-top: 100px;
+  /* margin-bottom: -201px;
+  margin-top: 100px; */
 }
 
 /* Overlay */

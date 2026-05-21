@@ -20,12 +20,12 @@
 .footer-logo{
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 16px;
   margin-bottom: 15px;
 }
 
 .footer-logo img{
-  width: 50px;
+  width: 30px;
 }
 
 .footer-logo span{

@@ -290,7 +290,7 @@
 
 
     <!-- 11 -->
-    <div class="thirdparty-box">
+    <!-- <div class="thirdparty-box">
 
       <h2>11. Declaration</h2>
 
@@ -314,7 +314,7 @@
         </li>
       </ul>
 
-    </div>
+    </div> -->
 
   </div>
 
@@ -366,6 +366,24 @@
     })
     .catch(err => console.error("Footer load failed:", err));
  });
+
+fetch("./components/header.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("header").innerHTML = data;
+  });
+
+document.addEventListener("click", function (e) {
+
+  if (e.target && e.target.id === "menuToggle") {
+
+    const navMenu = document.getElementById("navMenu");
+
+    navMenu.classList.toggle("active");
+  }
+
+});
+
  </script>
 
 
