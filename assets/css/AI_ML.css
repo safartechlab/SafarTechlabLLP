@@ -204,7 +204,7 @@
 .ai-section p,
 .ml-section p{
     margin-bottom:20px;
-    color: #007bff;
+    color: #26334199;
     font-size: 17px;
     line-height: 1.7;
 }
@@ -237,7 +237,7 @@
 .ml-points{
     display:flex;
     gap:40px;
-    color: #007bff;
+    color: #26334199;
 }
 
 .ai-points ul,

@@ -231,7 +231,7 @@ main {
 .info-description {
   font-size: 19px;
   line-height: 1.7;
-  color: #007bff;;
+  color: #26334199;
   margin: 0;
   letter-spacing: 0.5px;
   line-height: 30.5px;
@@ -277,12 +277,12 @@ main {
   align-items: center;
   gap: 12px;
   font-size: 17px;
-  color: #007bff;
+  color: #26334199;
   margin-bottom: 12px;
 }
 
 .values-list i {
-  color: #007bff; /* blue accent */
+  color: #007bff;
   font-size: 18px;
 }
 
@@ -298,7 +298,7 @@ main {
 .about-content p {
   font-size: 17px;
   line-height: 1.7;
-  color: #007bff;
+  color: #26334199;
   margin: 0;
   margin-bottom: 33px;
 }
@@ -381,26 +381,21 @@ main {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* .counter-box:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 45px rgba(255, 255, 255, 0.35);
-} */
-
 
 /* Counter number */
-.counter-box h2 {
+/* .counter-box h2 {
   font-size: 48px;
   font-weight: 700;
   color: #000;
   margin-bottom: 10px;
-}
+} */
 
 /* Counter label */
-.counter-box p {
+/* .counter-box p {
   font-size: 18px;
   color: #000;
   margin: 0;
-}
+} */
 
   
 
@@ -422,6 +417,27 @@ main {
   background: #fcfcfce0;
   box-shadow: 0 15px 35px rgba(253, 253, 253, 0.25);
 }
+
+
+.counter-box i{
+    font-size: 30px;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.counter-box h3{
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #000;
+}
+
+.counter-box p{
+    font-size: 18px;
+    color: #222;
+    line-height: 1.6;
+}
+
 
 
 
@@ -451,7 +467,7 @@ main {
   font-size: 18px;
   max-width: 736px;
   margin: 0 auto 60px;
-  color: #007bff;
+  color: #26334199;
   letter-spacing: 0.5px;
   line-height: 30px;
 }

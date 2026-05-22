@@ -177,7 +177,7 @@
 .data-section p,
 .bi-section p{
     margin-bottom:20px;
-    color: #007bff;
+    color: #26334199;
     font-size: 17px;
     line-height: 1.7;
 }
@@ -211,7 +211,7 @@
 .bi-points{
     display:flex;
     gap:40px;
-    color: #007bff;
+    color: #26334199;
 }
 
 .data-points ul,
