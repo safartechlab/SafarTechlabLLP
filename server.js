@@ -2,6 +2,7 @@ const express = require("express");
 const nodemailer = require("nodemailer");
 const cors = require("cors");
 const multer = require("multer");
+require("dotenv").config();
 
 const app = express();
 
@@ -39,7 +40,7 @@ const transporter = nodemailer.createTransport({
 
     user: "safartechlab@gmail.com",
 
-    pass: "jkev zspi pgwh ycqj"
+    pass: process.env.EMAIL_PASS
 
   }
 
