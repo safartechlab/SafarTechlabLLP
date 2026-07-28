@@ -48,7 +48,7 @@ const transporter = nodemailer.createTransport({
 });
 
 /* =========================
-   CONTACT FORM
+   PROJECT SUBMMISION FORM
 ========================= */
 
 app.post("/send-email", async (req, res) => {
